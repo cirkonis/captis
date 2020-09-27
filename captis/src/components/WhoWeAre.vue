@@ -5,34 +5,24 @@
     </div>
         <div>
         <v-container fluid class="people-container">
-                <v-col cols="12">
+                <v-col cols="8">
                     <v-row class="people-row">
                         <v-card
                                 v-for="person in people"
                                 :key="person.id"
                                 class="people-cards mx-auto"
+                                elevation="1"
+                                hover="true"
+                                outlined="true"
                         >
                             <v-img class="people-pics" v-bind:src="require('../assets/peoplePics/' + person.picture)"></v-img>
                             <v-card-title class="people-names">{{person.name}}</v-card-title>
                             <v-card-subtitle class="people-descriptions">{{person.description}}</v-card-subtitle>
-                            <v-card-actions>
-                                <v-btn class="more-info-button" text>
-                                More Info
-                            </v-btn>
-<v-spacer></v-spacer>
-                            <v-btn>linkedIn</v-btn>
-                                <v-btn>email</v-btn>
-                            <v-btn>something else</v-btn>
-                            </v-card-actions>
-                            <v-expand-transition>
-                                <div v-show="show">
-                                    <v-divider></v-divider>
-
-                                    <v-card-text>
-                                        I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
-                                    </v-card-text>
-                                </div>
-                            </v-expand-transition>
+                            <span>
+                            <v-icon class = "links" small color="#61BFF0" v-on:click="linkedInClick()">mdi-linkedin</v-icon>
+                            <v-icon class = "links" small color="#61BFF0" v-on:click="emailClick()">mdi-email</v-icon>
+                            <v-icon class = "links" small color="#61BFF0" v-on:click="moreInfoClick()">mdi-information-outline</v-icon>
+                                </span>
                         </v-card>
                     </v-row>
                 </v-col>
@@ -106,6 +96,17 @@
                     },
                 ]
             }
+        },
+        methods: {
+            linkedInClick(){
+                console.log("linkedIn icon clicked");
+            },
+            emailClick(){
+                console.log("email icon clicked");
+            },
+            moreInfoClick(){
+                console.log("more info icon clicked");
+            }
         }
     }
 </script>
@@ -115,13 +116,15 @@
     font-family: Optima;
     font-style: normal;
     color: #61BFF0;
-    margin-bottom: 100px;
+    /*margin-bottom: 5px;*/
 }
 .people-container{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    background-color: red;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    min-width: 100%;
 }
 .people-row{
     display: flex;
@@ -129,37 +132,55 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
-    background-color: green;
 }
 
 .people-cards{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
     align-content: center;
     justify-items: center;
-    min-width: 100px;
+    margin: 20px;
+    min-width: 200px;
     max-width: 200px;
-    min-height: 40px;
-    max-hieght: 80px;
-    background-color: pink;
+    min-height: 200px;
+    max-height: 600px;
+    width: 500px;
+    height: 300px;
 }
 .people-pics{
-display: flex;
-align-content: center;
-justify-content: center;
-width: 50px;
-height: 50px;
-    background-color: blue;
+/*display: flex;*/
+/*align-content: center;*/
+/*justify-content: center;*/
+/*overflow: visible;*/
+width: 50%;
+height: 50%;
+left: 25%;
+border-radius: 50%;
 }
 .people-names{
-    font-family: Optima;
-    font-size: 14px;
-    font-color: #61Bff0;
-    background-color: yellow;
+    font-family: Optima, b,sans-serif;
+    font-variant: all-petite-caps;
+    font-size: 18px;
+    alignment-baseline: top;
+    color: #61BFF0;
+    top: 0;
 
 }
 .people-descriptions{
-    font-family: Optima;
+    font-family: Optima, serif;
     font-size: 10px;
-    font-color: gray;
-    background-color: greenyellow;
+    color: gray;
+}
+.links{
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    max-width: 30px;
+    left: 20%;
+    padding-right: 33%;
 }
 </style>
