@@ -6,16 +6,18 @@
         <div>
         <v-container fluid class="people-container">
                 <v-col cols="8">
-                    <v-row class="people-row">
+                    <v-row class="people-row"  >
+                     <div     v-for="person in people"
+                              :key="person.id">
+                        <v-img class="people-pics" v-bind:src="require('../assets/peoplePics/' + person.picture)"></v-img>
+
                         <v-card
-                                v-for="person in people"
-                                :key="person.id"
                                 class="people-cards mx-auto"
-                                elevation="1"
-                                hover="true"
-                                outlined="true"
+                                elevation="0"
+                                hover="false"
+                                outlined="false"
                         >
-                            <v-img class="people-pics" v-bind:src="require('../assets/peoplePics/' + person.picture)"></v-img>
+
                             <v-card-title class="people-names">{{person.name}}</v-card-title>
                             <v-card-subtitle class="people-descriptions">{{person.description}}</v-card-subtitle>
                             <span>
@@ -24,6 +26,7 @@
                             <v-icon class = "links" small color="#61BFF0" v-on:click="moreInfoClick()">mdi-information-outline</v-icon>
                                 </span>
                         </v-card>
+                     </div>
                     </v-row>
                 </v-col>
         </v-container>
@@ -40,58 +43,58 @@
                 people: [
                     {
                         id: 0,
-                        name: "a name",
-                        description: "a description",
+                        name: "Artur Żebrowski",
+                        description: "Wind Energy",
                         picture: "a.jpg",
-                        linkdIn: "",
+                        linkdIn: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fartur-s-zebrowski%2F%3Ffbclid%3DIwAR2tEib6aC67nSBaCnVEH1rnQohN8L86X6Rd-aqyixczkBhTkFBaZK8VZoY&h=AT3o0ZB4CdsxnuOIPwAcITDyek8eoZ-PEeAlUkPe6HNhAgxswpmMkZPG-0t_sO06WR9iy7vxPwan9-HeFts6pureelOIEZCAGlcd_5PPG1avGQoUNPPVGH2nhU3ZTrYbSUYmUcPH",
                         email:"",
                     },
                     {
                         id: 1,
-                        name: "b name",
-                        description: "b description",
+                        name: "Burkay Duymaz",
+                        description: "Product Development",
                         picture: "b.jpg",
-                        linkdIn: "",
+                        linkdIn: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fburkay-duymaz-152b26152%2F%3Ffbclid%3DIwAR1n1ArAzq1alCD4kaMsBtwgGpEl9JxSkWNvrrfKtBKoySHpvgKGLfbQcxc&h=AT3o0ZB4CdsxnuOIPwAcITDyek8eoZ-PEeAlUkPe6HNhAgxswpmMkZPG-0t_sO06WR9iy7vxPwan9-HeFts6pureelOIEZCAGlcd_5PPG1avGQoUNPPVGH2nhU3ZTrYbSUYmUcPH",
                         email:"",
                     },
                     {
                         id: 2,
-                        name: "c name",
-                        description: "c description",
+                        name: "Cyril Eštok",
+                        description: "Chemical Engineering",
                         picture: "c.jpg",
-                        linkdIn: "",
+                        linkdIn: "https://l.facebook.com/l.php?u=http%3A%2F%2Flinkedin.com%2Fin%2Fcyril-estok%3Ffbclid%3DIwAR2rAeu0-CaJclt0S4xYipY6i3hxApkXgS0hIh0D7mNDphNyVqCOBMZ_aE8&h=AT3o0ZB4CdsxnuOIPwAcITDyek8eoZ-PEeAlUkPe6HNhAgxswpmMkZPG-0t_sO06WR9iy7vxPwan9-HeFts6pureelOIEZCAGlcd_5PPG1avGQoUNPPVGH2nhU3ZTrYbSUYmUcPH",
                         email:"",
                     },
                     {
                         id: 3,
-                        name: "m name",
-                        description: "m description",
+                        name: "Michael Marigliano",
+                        description: "Software Engineering",
                         picture: "m.jpg",
-                        linkdIn: "",
+                        linkdIn: "https://www.linkedin.com/in/michael-marigliano-b22a2b1ab/",
                         email:"",
                     },
                     {
                         id: 4,
-                        name: "n name",
-                        description: "n description",
+                        name: "Nathan Moret​",
+                        description: "Physics and Nanotechnology​",
                         picture: "n.jpg",
+                        linkdIn: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fnathan-moret-456464184%3Ffbclid%3DIwAR3hS95T7didCfOMaiTpZG03-SWcUoLhpjSuxURZrQV2TeAUlitWhHT8hhQ&h=AT3o0ZB4CdsxnuOIPwAcITDyek8eoZ-PEeAlUkPe6HNhAgxswpmMkZPG-0t_sO06WR9iy7vxPwan9-HeFts6pureelOIEZCAGlcd_5PPG1avGQoUNPPVGH2nhU3ZTrYbSUYmUcPH",
+                        email:"",
+                    },
+                    {
+                        id: 6,
+                        name: "Zainab Hassoun",
+                        description: "Autonomous Systems Engineering",
+                        picture: "z.jpg",
                         linkdIn: "",
                         email:"",
                     },
                     {
                         id: 5,
-                        name: "o name",
-                        description: "o description",
+                        name: "Ole Kleinschmidt​",
+                        description: "Materials and Manufacturing​",
                         picture: "o.jpg",
-                        linkdIn: "",
-                        email:"",
-                    },
-                    {
-                        id: 6,
-                        name: "z name",
-                        description: "z description",
-                        picture: "z.jpg",
-                        linkdIn: "",
+                        linkdIn: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Folekleinschmidt%2F%3Ffbclid%3DIwAR2IY3K0yw4tEHa_6V7VvPEvqRjSttI7q0U03rE5wE_ucKuPvL6mrlhh9Hg&h=AT3o0ZB4CdsxnuOIPwAcITDyek8eoZ-PEeAlUkPe6HNhAgxswpmMkZPG-0t_sO06WR9iy7vxPwan9-HeFts6pureelOIEZCAGlcd_5PPG1avGQoUNPPVGH2nhU3ZTrYbSUYmUcPH",
                         email:"",
                     },
                 ]
@@ -140,24 +143,29 @@
     flex-flow: column;
     align-content: center;
     justify-items: center;
-    margin: 20px;
-    min-width: 200px;
-    max-width: 200px;
-    min-height: 200px;
-    max-height: 600px;
-    width: 500px;
-    height: 300px;
+    /* top | right | bottom | left */
+    margin: 20px 10% 0 10%;
+    /*min-width: 200px;*/
+    /*max-width: 200px;*/
+    /*min-height: 100px;*/
+    /*max-height: 200px;*/
+    width: 200px;
+    height: 100px;
 }
-.people-pics{
-/*display: flex;*/
-/*align-content: center;*/
-/*justify-content: center;*/
-/*overflow: visible;*/
-width: 50%;
-height: 50%;
-left: 25%;
-border-radius: 50%;
+.people-pics {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
 }
+
+ .people-pics:hover{
+    cursor: default;
+  }
+
 .people-names{
     font-family: Optima, b,sans-serif;
     font-variant: all-petite-caps;
@@ -165,12 +173,19 @@ border-radius: 50%;
     alignment-baseline: top;
     color: #61BFF0;
     top: 0;
-
+    bottom: 0;
+}
+.people-names:hover{
+    cursor: default;
 }
 .people-descriptions{
     font-family: Optima, serif;
     font-size: 10px;
     color: gray;
+    marigin: 0;
+}
+.people-descriptions:hover{
+    cursor: default;
 }
 .links{
     display: flex;
@@ -179,8 +194,10 @@ border-radius: 50%;
     justify-content: center;
     align-content: center;
     flex-wrap: nowrap;
-    max-width: 30px;
-    left: 20%;
-    padding-right: 33%;
+    width: 15px;
+    height: 15px;
+    /* top | right | bottom | left */
+    left: 15%;
+    margin:-15% 25% 0 0%;
 }
 </style>
