@@ -22,7 +22,8 @@ import WhoWeAre from "./components/WhoWeAre";
 import Vue from 'vue';
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
-
+import VueClipboard from 'vue-clipboard2'
+Vue.use(VueClipboard);
 Vue.use(Vuetify);
 
 export default {
