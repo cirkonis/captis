@@ -18,11 +18,11 @@
 
                             <v-card-title class="people-names">{{person.name}}</v-card-title>
                             <v-card-subtitle class="people-descriptions text-center">{{person.description}}</v-card-subtitle>
-                            <span>
-                            <v-icon class = "links" small color="#61BFF0"  v-on:click="linkedInClick(person.linkdIn)">mdi-linkedin</v-icon>
+                        <v-container class="link-container">
+                            <v-icon class = "links" small color="#61BFF0" v-on:click="linkedInClick(person.linkdIn)">mdi-linkedin</v-icon>
                             <v-icon class = "links" small color="#61BFF0" v-on:click="emailClick(person.email, person.name)">mdi-email</v-icon>
                             <v-icon class = "links" small color="#61BFF0" v-on:click="moreInfoClick()">mdi-information-outline</v-icon>
-                                </span>
+                        </v-container>
                         </v-card>
                      </div>
                     </v-row>
@@ -82,7 +82,7 @@
                     {
                         id: 6,
                         name: "Zainab Hassoun",
-                        description: "Autonomous Systems Engineering",
+                        description: "Autonomous Systems",
                         picture: "z.jpg",
                         linkdIn: "http://linkedin.com",
                         email:"s165036@student.dtu.dk",
@@ -150,11 +150,7 @@
     align-content: center;
     justify-items: center;
     /* top | right | bottom | left */
-    margin: 5px 10% 0 10%;
-    /*min-width: 200px;*/
-    /*max-width: 200px;*/
-    /*min-height: 100px;*/
-    /*max-height: 200px;*/
+    margin: 5px 10% 10px 10%;
     width: 200px;
     height: 100px;
 }
@@ -167,7 +163,6 @@
     height: 200px;
     border-radius: 50%;
 }
-
  .people-pics:hover{
     cursor: default;
   }
@@ -193,17 +188,17 @@
 .people-descriptions:hover{
     cursor: default;
 }
-.links{
+.link-container{
     display: flex;
     flex-flow: row;
     flex-direction: row;
-    justify-content: center;
-    align-content: center;
     flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.links{
+    bottom: 15px;
     width: 15px;
     height: 15px;
-    /* top | right | bottom | left */
-    left: 15%;
-    margin:-15% 25% 0 0%;
 }
 </style>
