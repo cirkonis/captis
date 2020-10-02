@@ -1,5 +1,6 @@
 <template>
   <v-app>
+      <Carbon/>
       <div class="logo">
         <v-img
           alt="Vuetify Logo"
@@ -11,20 +12,23 @@
           height="350"
         />
       </div>
-        <Main/>
+      <Main/>
     <WhoWeAre/>
   </v-app>
 </template>
 
 <script>
+import Carbon from "./components/Carbon";
 import Main from './components/Main';
 import WhoWeAre from "./components/WhoWeAre";
 import Vue from 'vue';
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
-import VueClipboard from 'vue-clipboard2'
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
+import VueClipboard from 'vue-clipboard2';
+import * as d3 from 'd3';
 Vue.use(VueClipboard);
 Vue.use(Vuetify);
+console.log(d3);
 
 export default {
   name: 'App',
@@ -32,8 +36,8 @@ export default {
   components: {
     WhoWeAre,
     Main,
+    Carbon,
   },
-
   data: () => ({
     //
   }),

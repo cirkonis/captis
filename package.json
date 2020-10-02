@@ -1,5 +1,10 @@
 {
   "dependencies": {
+    "d3": "^6.2.0",
     "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "d3": "^6.2.0",
+    "webpack": "^4.44.2"
   }
 }
