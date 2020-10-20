@@ -23,12 +23,12 @@ import Main from './components/Main';
 import WhoWeAre from "./components/WhoWeAre";
 import Vue from 'vue';
 import Vuetify from 'vuetify';
+import * as d3 from 'd3';
 import 'vuetify/dist/vuetify.min.css';
 import VueClipboard from 'vue-clipboard2';
-import * as d3 from 'd3';
 Vue.use(VueClipboard);
 Vue.use(Vuetify);
-console.log(d3);
+Vue.use(d3);
 
 export default {
   name: 'App',
@@ -39,7 +39,7 @@ export default {
     Carbon,
   },
   data: () => ({
-    //
+
   }),
 };
 </script>
@@ -48,5 +48,7 @@ export default {
         display: flex;
         align-content: center;
         justify-content: center;
+        top:2.5%;
+        left: 35%;
     }
 </style>
