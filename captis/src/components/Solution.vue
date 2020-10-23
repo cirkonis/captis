@@ -34,6 +34,11 @@
     .solution-text-container{
         display: flex;
         flex-direction: column;
+        text-align: center;
+        font-family: Optima;
+        font-style: normal;
+        font-size: 20px;
+        color: #61BFF0;
     }
 
     .solution-svg-container{
@@ -43,6 +48,9 @@
 
     .solution-text{
         display: inline;
+        font-family: Optima, serif;
+        font-size: 18px;
+        color: gray;
     }
 
     .solution-svg{

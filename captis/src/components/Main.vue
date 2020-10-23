@@ -5,7 +5,7 @@
         <h1 class ="the-header">Captis Cometh... Welcome to our mess, you're a little early buddy ;)</h1>
         </v-row>
         <v-row>
-            <p v-dummy = "300"></p>
+            <p class="flufferMcflufferton" v-dummy = "200"></p>
         </v-row>
     </v-col>
     </v-container>
@@ -25,7 +25,15 @@
         text-align: center;
         font-family: Optima;
         font-size: 50px;
-        color: #9e9e9e;
+        font-style: normal;
+        color: #61BFF0;
+    }
 
+    .flufferMcflufferton{
+        text-align: center;
+        font-family: Optima;
+        font-size: 20px;
+        font-style: normal;
+        color: gray;
     }
 </style>

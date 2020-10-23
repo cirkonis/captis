@@ -35,6 +35,11 @@
     .bizniz-text-container{
         display: flex;
         flex-direction: column;
+        text-align: center;
+        font-family: Optima;
+        font-style: normal;
+        font-size: 20px;
+        color: #61BFF0;
     }
 
     .bizniz-svg-container{
@@ -44,6 +49,9 @@
 
     .bizniz-text{
         display: inline;
+        font-family: Optima, serif;
+        font-size: 18px;
+        color: gray;
     }
 
     .bizniz-svg{
