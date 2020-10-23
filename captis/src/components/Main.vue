@@ -1,7 +1,9 @@
 <template>
+    <v-container>
     <div>
         <h1 class ="the-header">Captis Cometh...</h1>
     </div>
+    </v-container>
 </template>
 <script></script>
 <style>
