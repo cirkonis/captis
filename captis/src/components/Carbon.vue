@@ -19,7 +19,6 @@
             let bonds = [];
             let numNodes = Math.pow(3, 5);
             let nodes = [];
-            if(numNodes % 3 === 0) {
                 for (let i = 0; i < numNodes; i += 3) {
                     nodes.push({id: i, type: 'c1'});
                     nodes.push({id: i + 1, type: 'c2'});
@@ -27,7 +26,6 @@
                     bonds.push({source: i, target: i+2});
                     bonds.push({source: i + 1, target: i+2});
                 }
-            }
             let edges = bonds;
             console.log(nodes);
             console.log(edges);
@@ -81,6 +79,7 @@
 
 <style>
     .svg-container{
+        position: absolute;
         top: 5%;
         left: 5%;
         z-index: 0;

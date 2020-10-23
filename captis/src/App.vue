@@ -11,7 +11,7 @@
           width="350"
           height="350"
         />
-      </div>
+            </div>
       <Main/>
     <WhoWeAre/>
   </v-app>
