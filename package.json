@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "d3": "^6.2.0",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-lorem-ipsum": "^0.0.1"
   },
   "devDependencies": {}
 }
