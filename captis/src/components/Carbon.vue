@@ -17,7 +17,7 @@
             let svg = d3.select('.carbon-svg');
             let g = svg.append('g');
             let bonds = [];
-            let numNodes = Math.pow(3, 5);
+            let numNodes = Math.pow(3, 6);
             let nodes = [];
                 for (let i = 0; i < numNodes; i += 3) {
                     nodes.push({id: i, type: 'c1'});
@@ -27,8 +27,6 @@
                     bonds.push({source: i + 1, target: i+2});
                 }
             let edges = bonds;
-            console.log(nodes);
-            console.log(edges);
             let forceSimulation = d3.forceSimulation()
                 .force('link', d3.forceLink())
                 .force('charge', d3.forceManyBody())
@@ -64,13 +62,15 @@
 
 
             function ticked () {
+
+                gs
+                 .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
+
                 links
                     .attr('x1', function (d) { return d.source.x })
                     .attr('y1', function (d) { return d.source.y })
                     .attr('x2', function (d) { return d.target.x })
                     .attr('y2', function (d) { return d.target.y });
-                gs
-                    .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
             }
         },
     }
@@ -86,7 +86,7 @@
         display: flex;
         opacity: .3;
         width: 95%;
-        height: 350px;
+        height: 500px;
         border-radius: 40%;
     }
     .carbon-svg{
@@ -96,3 +96,6 @@
     }
 
 </style>
+
+//USER: admin@captis.dk
+// PASSWORD: captisownstheworld
