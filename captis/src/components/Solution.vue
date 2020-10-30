@@ -35,10 +35,10 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        font-family: Optima;
+        font-family: "Trebuchet MS";
         font-style: normal;
         font-size: 20px;
-        color: #61BFF0;
+        color: #27214C;
     }
 
     .solution-svg-container{
@@ -48,16 +48,16 @@
 
     .solution-text{
         display: inline;
-        font-family: Optima, serif;
+        font-family: "Trebuchet MS", serif;
         font-size: 18px;
-        color: gray;
+        color: #2D2B1F;
     }
 
     .solution-svg{
         width: 400px;
         height: 600px;
         display: inline;
-        background-color: dodgerblue;
+        background-color: #61BFF0;
         margin-left: 20px;
         margin-top: 30px;
     }

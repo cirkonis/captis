@@ -23,7 +23,7 @@
         justify-content: center;
         align-content: center;
         text-align: center;
-        font-family: Optima;
+        font-family: "Trebuchet MS";
         font-size: 50px;
         font-style: normal;
         color: #61BFF0;
@@ -31,9 +31,9 @@
 
     .flufferMcflufferton{
         text-align: center;
-        font-family: Optima;
+        font-family: "Trebuchet MS";
         font-size: 20px;
         font-style: normal;
-        color: gray;
+        darkcolor: #2D2B1F;
     }
 </style>

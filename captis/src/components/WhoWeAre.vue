@@ -122,7 +122,7 @@
 <style scoped>
 .header{
     text-align: center;
-    font-family: Optima;
+    font-family: "Trebuchet MS";
     font-style: normal;
     color: #61BFF0;
     /*margin-bottom: 5px;*/
@@ -168,7 +168,7 @@
   }
 
 .people-names{
-    font-family: Optima, b,sans-serif;
+    font-family: "Trebuchet MS", b,sans-serif;
     font-variant: all-petite-caps;
     font-size: 18px;
     alignment-baseline: top;
@@ -183,7 +183,7 @@
 .people-descriptions{
     font-family: Optima, serif;
     font-size: 12px;
-    color: gray;
+    color: darkgray;
 }
 .people-descriptions:hover{
     cursor: default;
