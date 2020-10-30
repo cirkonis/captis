@@ -9,19 +9,21 @@
         </v-toolbar-title>
         <v-spacer> </v-spacer>
         <v-toolbar-items class="toolbar-buttons">
-            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
+            <v-btn class = "toolbar-button"
+                   text color="#27214C"
+                   v-on:click.native="buttonWorks">
                 {{buttonNames[0].buttonName}}
             </v-btn>
-            <v-btn class = "toolbar-button" text color="#27214C">
+            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
                 {{buttonNames[1].buttonName}}
             </v-btn>
-            <v-btn class = "toolbar-button" text color="#27214C">
+            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
                 {{buttonNames[2].buttonName}}
             </v-btn>
-            <v-btn class = "toolbar-button" text color="#27214C">
+            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
                 {{buttonNames[3].buttonName}}
             </v-btn>
-            <v-btn class = "toolbar-button" text color="#27214C">
+            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
                 {{buttonNames[4].buttonName}}
             </v-btn>
         </v-toolbar-items>

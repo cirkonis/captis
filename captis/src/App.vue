@@ -41,15 +41,18 @@ import Vuetify from 'vuetify';
 import * as d3 from 'd3';
 import 'vuetify/dist/vuetify.min.css';
 import VueClipboard from 'vue-clipboard2';
+import VueRouter from 'vue-router';
 import VueDummy from 'vue-dummy';
 import Problem from "./components/Problem";
 import Solution from "./components/Solution";
 import Bizniz from "./components/Bizniz";
 import Toolbar from "./components/Toolbar";
+
 Vue.use(VueDummy);
 Vue.use(VueClipboard);
 Vue.use(Vuetify);
 Vue.use(d3);
+Vue.use(VueRouter);
 
 export default {
   name: 'App',

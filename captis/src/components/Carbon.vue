@@ -81,18 +81,19 @@
     .svg-container{
         position: absolute;
         top: 0%;
-        left: 5%;
-        z-index: 0;
+        left: 3.5%;
         display: flex;
         opacity: .3;
-        width: 95%;
-        height: 500px;
-        border-radius: 40%;
+        width: 100%;
+        height: 100%;
+        border-radius: 2%;
+        z-index: 0;
     }
+
     .carbon-svg{
         width: 100%;
         height: 100%;
-        border-radius: 40%;
+        border-radius: 2%;
     }
 
 </style>
