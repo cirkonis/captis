@@ -1,4 +1,5 @@
 <template>
+<div class="problem">
 <v-container class="problem-container">
     <v-container class = "problem-text-container">
         <v-col>
@@ -16,6 +17,7 @@
         </v-col>
     </v-container>
 </v-container>
+</div>
 </template>
 
 <script>

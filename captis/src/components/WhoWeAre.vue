@@ -1,4 +1,5 @@
 <template>
+    <div class="who-we-are">
     <body>
     <div>
     <h1 class="header">Who We Are</h1>
@@ -30,6 +31,7 @@
         </v-container>
         </div>
     </body>
+    </div>
 </template>
 
 <script>

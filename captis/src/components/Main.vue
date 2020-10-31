@@ -1,28 +1,35 @@
 <template>
-    <v-container class="main">
+    <div class="main">
+    <v-container class="main-container">
     <v-col cols="12">
         <v-row>
-        <h1 class ="the-header">Captis Cometh... Welcome to our mess, you're a little early buddy ;)</h1>
+        <h1 class ="the-header">Off Shore Carbon Capture</h1>
         </v-row>
         <v-row>
-            <p class="flufferMcflufferton" v-dummy = "200"></p>
+            <p class="flufferMcflufferton" v-dummy = "100"></p>
         </v-row>
     </v-col>
     </v-container>
+    </div>
 </template>
 <script>
 </script>
 <style>
-    .main{
+    .main-container{
         display: flex;
         align-content: center;
         justify-content: center;
+        margin-top: -65px;
     }
     .the-header{
         display: flex;
         justify-content: center;
         align-content: center;
         text-align: center;
+        text-anchor: middle;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
         font-family: "Trebuchet MS";
         font-size: 50px;
         font-style: normal;

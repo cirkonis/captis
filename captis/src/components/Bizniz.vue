@@ -1,4 +1,5 @@
 <template>
+    <div class="bizniz">
     <v-container class="bizniz-container">
         <v-container class = "bizniz-text-container">
             <v-col>
@@ -16,6 +17,7 @@
             </v-col>
         </v-container>
     </v-container>
+    </div>
 </template>
 
 <script>

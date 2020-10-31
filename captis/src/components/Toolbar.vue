@@ -11,20 +11,24 @@
         <v-toolbar-items class="toolbar-buttons">
             <v-btn class = "toolbar-button"
                    text color="#27214C"
-                   v-on:click.native="buttonWorks">
-                {{buttonNames[0].buttonName}}
+                   v-on:click.native="buttonWorks(links[0].route)" router to="/main">
+                {{links[0].name}}
             </v-btn>
-            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
-                {{buttonNames[1].buttonName}}
+            <v-btn class = "toolbar-button" text color="#27214C"
+                   v-on:click.native="buttonWorks(links[1].route)" router to="/problem">
+                {{links[1].name}}
             </v-btn>
-            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
-                {{buttonNames[2].buttonName}}
+            <v-btn class = "toolbar-button" text color="#27214C"
+                   v-on:click.native="buttonWorks(links[2].route)" router to="/solution">
+                {{links[2].name}}
             </v-btn>
-            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
-                {{buttonNames[3].buttonName}}
+            <v-btn class = "toolbar-button" text color="#27214C"
+                   v-on:click.native="buttonWorks(links[3].route)" router to="/bizniz">
+                {{links[3].name}}
             </v-btn>
-            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
-                {{buttonNames[4].buttonName}}
+            <v-btn class = "toolbar-button" text color="#27214C"
+                   v-on:click.native="buttonWorks(links[4].route)" router to="/who-we-are">
+                {{links[4].name}}
             </v-btn>
         </v-toolbar-items>
     </v-toolbar>
@@ -36,18 +40,18 @@
             data: function () {
                 return {
                     title: "CAPTIS",
-                    buttonNames: [
-                        {buttonName: "Main"},
-                        {buttonName: "Problem"},
-                        {buttonName: "Solution"},
-                        {buttonName: "Money"},
-                        {buttonName: "Us"},
+                    links: [
+                        {name: "What", route: '/'},
+                        {name: "Where", route: '/problem'},
+                        {name: "How", route: '/solution'},
+                        {name: "Why", route: '/bizniz'},
+                        {name: "Who", route: '/who-we-are'},
                         ]
                 }
             },
         methods: {
-            buttonWorks(){
-                console.log('button works')
+            buttonWorks(button){
+                console.log(button);
             }
         }
     }

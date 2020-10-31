@@ -3,6 +3,10 @@
 <!--    <v-navigation-drawer app>-->
 <!--     -->
 <!--    </v-navigation-drawer>-->
+        <v-content>
+            <router-view></router-view>
+        </v-content>
+
         <v-app-bar   dense
                      flat
                      app
@@ -10,7 +14,6 @@
                     >
             <Toolbar/>
         </v-app-bar>
-      <div class="slide-to-the-right">
       <Carbon/>
       <div class="logo">
         <v-img
@@ -28,7 +31,6 @@
       <Solution/>
       <Bizniz/>
     <WhoWeAre/>
-      </div>
   </v-app>
 </template>
 
@@ -41,7 +43,6 @@ import Vuetify from 'vuetify';
 import * as d3 from 'd3';
 import 'vuetify/dist/vuetify.min.css';
 import VueClipboard from 'vue-clipboard2';
-import VueRouter from 'vue-router';
 import VueDummy from 'vue-dummy';
 import Problem from "./components/Problem";
 import Solution from "./components/Solution";
@@ -52,11 +53,9 @@ Vue.use(VueDummy);
 Vue.use(VueClipboard);
 Vue.use(Vuetify);
 Vue.use(d3);
-Vue.use(VueRouter);
 
 export default {
   name: 'App',
-
 components: {
     Toolbar,
     WhoWeAre,
@@ -80,21 +79,4 @@ components: {
         left: 35%;
         margin-top: 20px;
     }
-
-    /*body, html {*/
-    /*    padding: 0;*/
-    /*    margin: 0;*/
-    /*    width: 100%;*/
-    /*    min-height: 100%;*/
-    /*    background-color: ;*/
-    /*}*/
-
-    /*.slide-to-the-right{*/
-    /*    width: 100%;*/
-    /*    height: 100%;*/
-    /*    background-color: #DFF2FF;*/
-    /*    opacity: .25;*/
-    /*    margin-left: 150px;*/
-    /*}*/
-
 </style>

@@ -1,4 +1,5 @@
 <template>
+    <div class="solution">
     <v-container class="solution-container">
         <v-container class = "solution-svg-container">
             <v-col>
@@ -16,6 +17,7 @@
             </v-col>
         </v-container>
     </v-container>
+    </div>
 </template>
 
 <script>
