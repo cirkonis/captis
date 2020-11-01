@@ -5,7 +5,8 @@
         <v-col>
         <v-row><h1>Where</h1></v-row>
             <v-row>
-                <p class="problem-text" v-dummy = "200"></p>
+                <p class="problem-text">{{message}}</p>
+                <p class="problem-text" v-dummy = "150"></p>
             </v-row>
         </v-col>
     </v-container>
@@ -22,7 +23,12 @@
 
 <script>
     export default {
-        name: "Problem"
+        name: "Problem",
+        data: function() {
+            return{
+             message: "Here there be monsters lad. The seas and what not. Why a specific geological location?"
+            }
+        }
     }
 </script>
 

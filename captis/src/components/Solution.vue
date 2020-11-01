@@ -11,7 +11,8 @@
             <v-col>
                 <v-row><h1>How</h1></v-row>
                 <v-row>
-                    <p class="solution-text" v-dummy = "200"></p>
+                    <p class="solution-text">{{message}}</p>
+                    <p class="solution-text" v-dummy = "150"></p>
                 </v-row>
             </v-col>
         </v-container>
@@ -20,7 +21,12 @@
 
 <script>
     export default {
-        name: "Solution"
+        name: "Solution",
+        data: function() {
+            return {
+                message: "This is how we do what ever it is we do!"
+            }
+        }
     }
 </script>
 

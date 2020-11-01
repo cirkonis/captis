@@ -41,7 +41,18 @@ Vue.use(VueDummy);
 Vue.use(VueClipboard);
 Vue.use(Vuetify);
 Vue.use(d3);
-Vue.use(VueScrollTo);
+Vue.use(VueScrollTo, {
+    duration: 500,
+    easing: "ease",
+    offset: 0,
+    force: true,
+    cancelable: true,
+    onStart: false,
+    onDone: false,
+    onCancel: false,
+    x: false,
+    y: true
+});
 
 export default {
   name: 'App',

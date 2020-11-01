@@ -18,13 +18,22 @@
         <h1 class ="the-header">Offshore Carbon Capture</h1>
         </v-row>
         <v-row>
-            <p class="flufferMcflufferton" v-dummy = "200"></p>
+            <p class="flufferMcflufferton">{{message}}</p>
+            <p class="flufferMcflufferton" v-dummy = "100"></p>
         </v-row>
     </v-col>
     </v-container>
     </div>
 </template>
 <script>
+    export default{
+        data: function(){
+            return{
+             message: "Well hello there! Aren't you a curios one. Please excuse our mess, excessive use of lorem ipsum, grammar, spelling, and Mike's strange filler text." +
+                 " We will be up and running in no time ;)"
+            }
+        }
+    }
 </script>
 <style>
     .main{
