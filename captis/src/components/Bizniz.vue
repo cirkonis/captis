@@ -2,7 +2,7 @@
     <v-container class="bizniz-container">
         <v-container class = "bizniz-text-container">
             <v-col>
-                <v-row><h1>Business Stuffs</h1></v-row>
+                <v-row><h1>Why</h1></v-row>
                 <v-row>
                     <p class="bizniz-text" v-dummy = "200"></p>
                 </v-row>
@@ -30,6 +30,7 @@
         display: flex;
         justify-content: space-between;
         align-content: space-between;
+        padding-top: 10px;
     }
 
     .bizniz-text-container{

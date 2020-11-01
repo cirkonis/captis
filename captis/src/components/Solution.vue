@@ -9,7 +9,7 @@
         </v-container>
         <v-container class = "solution-text-container">
             <v-col>
-                <v-row><h1>Solution</h1></v-row>
+                <v-row><h1>How</h1></v-row>
                 <v-row>
                     <p class="solution-text" v-dummy = "200"></p>
                 </v-row>
@@ -29,6 +29,7 @@
         display: flex;
         justify-content: space-between;
         align-content: space-between;
+        padding-top: 10px;
     }
 
     .solution-text-container{

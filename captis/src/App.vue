@@ -4,6 +4,7 @@
                      flat
                      app
                      color="white"
+                     class = "app-bar"
                     >
             <Toolbar/>
         </v-app-bar>
@@ -60,4 +61,7 @@ components: {
 };
 </script>
 <style>
+    .app-bar{
+        padding-bottom: 20px;
+    }
 </style>

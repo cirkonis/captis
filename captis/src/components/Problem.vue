@@ -3,7 +3,7 @@
 <v-container class="problem-container">
     <v-container class = "problem-text-container">
         <v-col>
-        <v-row><h1>Problem</h1></v-row>
+        <v-row><h1>Where</h1></v-row>
             <v-row>
                 <p class="problem-text" v-dummy = "200"></p>
             </v-row>
@@ -32,6 +32,7 @@
         display: flex;
         justify-content: space-between;
         align-content: space-between;
+        padding-top: 10px;
     }
 
     .problem-text-container{
