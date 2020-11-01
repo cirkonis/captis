@@ -14,7 +14,7 @@
                    v-on:click.native="buttonWorks">
                 {{buttonNames[0].buttonName}}
             </v-btn>
-            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
+            <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks()">
                 {{buttonNames[1].buttonName}}
             </v-btn>
             <v-btn class = "toolbar-button" text color="#27214C" v-on:click.native="buttonWorks">
@@ -48,6 +48,12 @@
         methods: {
             buttonWorks(){
                 console.log('button works')
+            },
+            scrollMeTo(refName) {
+                const element = this.$els[refName];
+                const top = element.offsetTop;
+
+                window.scrollTo(0, top);
             }
         }
     }
