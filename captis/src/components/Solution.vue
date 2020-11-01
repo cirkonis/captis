@@ -9,7 +9,7 @@
         </v-container>
         <v-container class = "solution-text-container">
             <v-col>
-                <v-row><h1>How</h1></v-row>
+                <v-row><h1 class="how">How</h1></v-row>
                 <v-row>
                     <p class="solution-text">{{message}}</p>
                     <p class="solution-text" v-dummy = "150"></p>
@@ -31,6 +31,9 @@
 </script>
 
 <style scoped>
+    .how{
+        width: 100%;
+    }
     .solution-container{
         display: flex;
         justify-content: space-between;
@@ -41,7 +44,7 @@
     .solution-text-container{
         display: flex;
         flex-direction: column;
-        text-align: center;
+        text-align: right;
         font-family: "Trebuchet MS";
         font-style: normal;
         font-size: 20px;
@@ -55,6 +58,7 @@
 
     .solution-text{
         display: inline;
+        text-align: right;
         font-family: "Trebuchet MS", serif;
         font-size: 18px;
         color: #2D2B1F;
