@@ -1,9 +1,8 @@
 <template>
-    <body>
-    <div>
-    <h1 class="header">Who We Are</h1>
-    </div>
         <div>
+            <div>
+                <h1 class="header">Who We Are</h1>
+            </div>
         <v-container fluid class="people-container">
                 <v-col cols="8">
                     <v-row class="people-row"  >
@@ -29,7 +28,6 @@
                 </v-col>
         </v-container>
         </div>
-    </body>
 </template>
 
 <script>
@@ -125,7 +123,7 @@
     font-family: "Trebuchet MS";
     font-style: normal;
     color: #61BFF0;
-    /*margin-bottom: 5px;*/
+
 }
 .people-container{
     display: flex;

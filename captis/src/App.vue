@@ -1,8 +1,5 @@
 <template>
     <v-app>
-<!--    <v-navigation-drawer app>-->
-<!--     -->
-<!--    </v-navigation-drawer>-->
         <v-app-bar   dense
                      flat
                      app
@@ -10,7 +7,9 @@
                     >
             <Toolbar/>
         </v-app-bar>
-      <div class="slide-to-the-right">
+    <div class="fullpage-container" :options="options">
+        <div class="fullpage-wp" v-fullpage="opts" :options="options" ref="fullpage">
+        <div class = "page">
       <Carbon/>
       <div class="logo">
         <v-img
@@ -24,11 +23,13 @@
         />
             </div>
       <Main/>
-      <Problem/>
-      <Solution/>
-      <Bizniz/>
-    <WhoWeAre/>
-      </div>
+        </div>
+        <div class = "page">     <Problem/>    </div>
+        <div class = "page">     <Solution/>   </div>
+        <div class = "page">     <Bizniz/>     </div>
+            <WhoWeAre/>
+    </div>
+    </div>
   </v-app>
 </template>
 
@@ -47,7 +48,11 @@ import Problem from "./components/Problem";
 import Solution from "./components/Solution";
 import Bizniz from "./components/Bizniz";
 import Toolbar from "./components/Toolbar";
+import VueFullpage from 'fullpage-vue';
+import 'fullpage-vue/src/fullpage.css'
 
+
+Vue.use(VueFullpage);
 Vue.use(VueDummy);
 Vue.use(VueClipboard);
 Vue.use(Vuetify);
@@ -56,19 +61,28 @@ Vue.use(VueRouter);
 
 export default {
   name: 'App',
-
 components: {
+    Bizniz,
+    Problem,
+    Solution,
     Toolbar,
-    WhoWeAre,
     Main,
     Carbon,
-    Bizniz,
-    Solution,
-    Problem,
+    WhoWeAre,
   },
   data: () => ({
-
+      options: {
+          autoScrolling: false,
+      }
   }),
+    mounted(){
+            this.fPage();
+    },
+    methods: {
+      fPage(){
+          console.log(this.$refs.fullpage);
+        }
+    },
 };
 </script>
 <style>
@@ -81,20 +95,11 @@ components: {
         margin-top: 20px;
     }
 
-    /*body, html {*/
-    /*    padding: 0;*/
-    /*    margin: 0;*/
-    /*    width: 100%;*/
-    /*    min-height: 100%;*/
-    /*    background-color: ;*/
-    /*}*/
-
-    /*.slide-to-the-right{*/
-    /*    width: 100%;*/
-    /*    height: 100%;*/
-    /*    background-color: #DFF2FF;*/
-    /*    opacity: .25;*/
-    /*    margin-left: 150px;*/
-    /*}*/
-
+    .fullpage-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
 </style>
