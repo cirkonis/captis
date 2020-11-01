@@ -1,11 +1,10 @@
 <template>
-    <body>
-    <div>
-    <h1 class="header">Who We Are</h1>
-    </div>
-        <div>
-        <v-container fluid class="people-container">
+            <v-container fluid class="people-container">
+                <v-container>
+                    <v-row class="header"><h1>Who</h1></v-row>
+                </v-container>
                 <v-col cols="8">
+
                     <v-row class="people-row"  >
                      <div     v-for="person in people"
                               :key="person.id">
@@ -28,8 +27,6 @@
                     </v-row>
                 </v-col>
         </v-container>
-        </div>
-    </body>
 </template>
 
 <script>
@@ -121,11 +118,14 @@
 </script>
 <style scoped>
 .header{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     font-family: "Trebuchet MS";
     font-style: normal;
+    font-size: 20px;
     color: #61BFF0;
-    /*margin-bottom: 5px;*/
+    padding-top: 30px;
 }
 .people-container{
     display: flex;

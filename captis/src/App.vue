@@ -1,58 +1,58 @@
 <template>
     <v-app>
-<!--    <v-navigation-drawer app>-->
-<!--     -->
-<!--    </v-navigation-drawer>-->
         <v-app-bar   dense
                      flat
                      app
                      color="white"
+                     class = "app-bar"
                     >
             <Toolbar/>
         </v-app-bar>
-      <div class="slide-to-the-right">
-      <Carbon/>
-      <div class="logo">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="../src/assets/captisLogo.svg"
-          transition="scale-transition"
-          width="350"
-          height="350"
-        />
-            </div>
-      <Main/>
-      <Problem/>
-      <Solution/>
-      <Bizniz/>
-    <WhoWeAre/>
-      </div>
+        <Carbon/>
+
+      <div id = "main">   <Main/>    </div>
+      <div id = "problem">  <Problem/>  </div>
+      <div id = "solution">  <Solution/> </div>
+      <div id = "bizniz">  <Bizniz/>   </div>
+      <div id = "who"> <WhoWeAre/>  </div>
   </v-app>
 </template>
 
 <script>
-import Carbon from "./components/Carbon";
-import Main from './components/Main';
-import WhoWeAre from "./components/WhoWeAre";
+//libraries and such
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import * as d3 from 'd3';
 import 'vuetify/dist/vuetify.min.css';
 import VueClipboard from 'vue-clipboard2';
-import VueRouter from 'vue-router';
 import VueDummy from 'vue-dummy';
+import VueScrollTo from 'vue-scrollto'
+
+//Components and such
+import Carbon from "./components/Carbon";
+import Toolbar from "./components/Toolbar";
+import Main from './components/Main';
 import Problem from "./components/Problem";
 import Solution from "./components/Solution";
 import Bizniz from "./components/Bizniz";
-import Toolbar from "./components/Toolbar";
+import WhoWeAre from "./components/WhoWeAre";
 
 Vue.use(VueDummy);
 Vue.use(VueClipboard);
 Vue.use(Vuetify);
 Vue.use(d3);
-Vue.use(VueRouter);
+Vue.use(VueScrollTo, {
+    duration: 500,
+    easing: "ease",
+    offset: 0,
+    force: true,
+    cancelable: true,
+    onStart: false,
+    onDone: false,
+    onCancel: false,
+    x: false,
+    y: true
+});
 
 export default {
   name: 'App',
@@ -72,29 +72,7 @@ components: {
 };
 </script>
 <style>
-    .logo{
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        top:5%;
-        left: 35%;
-        margin-top: 20px;
+    .app-bar{
+        padding-bottom: 20px;
     }
-
-    /*body, html {*/
-    /*    padding: 0;*/
-    /*    margin: 0;*/
-    /*    width: 100%;*/
-    /*    min-height: 100%;*/
-    /*    background-color: ;*/
-    /*}*/
-
-    /*.slide-to-the-right{*/
-    /*    width: 100%;*/
-    /*    height: 100%;*/
-    /*    background-color: #DFF2FF;*/
-    /*    opacity: .25;*/
-    /*    margin-left: 150px;*/
-    /*}*/
-
 </style>

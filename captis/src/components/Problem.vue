@@ -1,10 +1,12 @@
 <template>
+    <div>
 <v-container class="problem-container">
     <v-container class = "problem-text-container">
         <v-col>
-        <v-row><h1>Problem</h1></v-row>
+        <v-row><h1>Where</h1></v-row>
             <v-row>
-                <p class="problem-text" v-dummy = "200"></p>
+                <p class="problem-text">{{message}}</p>
+                <p class="problem-text" v-dummy = "150"></p>
             </v-row>
         </v-col>
     </v-container>
@@ -16,11 +18,17 @@
         </v-col>
     </v-container>
 </v-container>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "Problem"
+        name: "Problem",
+        data: function() {
+            return{
+             message: "Here there be monsters lad. The seas and what not. Why a specific geological location?"
+            }
+        }
     }
 </script>
 
@@ -30,6 +38,7 @@
         display: flex;
         justify-content: space-between;
         align-content: space-between;
+        padding-top: 10px;
     }
 
     .problem-text-container{
