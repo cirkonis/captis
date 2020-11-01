@@ -1,8 +1,5 @@
 <template>
     <v-app>
-<!--    <v-navigation-drawer app>-->
-<!--     -->
-<!--    </v-navigation-drawer>-->
         <v-app-bar   dense
                      flat
                      app
@@ -11,35 +8,39 @@
             <Toolbar/>
         </v-app-bar>
         <Carbon/>
-      <Main/>
-      <Problem/>
-      <Solution/>
-      <Bizniz/>
-    <WhoWeAre/>
+
+      <div id = "main">   <Main/>    </div>
+      <div id = "problem">  <Problem/>  </div>
+      <div id = "solution">  <Solution/> </div>
+      <div id = "bizniz">  <Bizniz/>   </div>
+      <div id = "who"> <WhoWeAre/>  </div>
   </v-app>
 </template>
 
 <script>
-import Main from './components/Main';
-import WhoWeAre from "./components/WhoWeAre";
+//libraries and such
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import * as d3 from 'd3';
 import 'vuetify/dist/vuetify.min.css';
 import VueClipboard from 'vue-clipboard2';
-import VueRouter from 'vue-router';
 import VueDummy from 'vue-dummy';
+import VueScrollTo from 'vue-scrollto'
+
+//Components and such
+import Carbon from "./components/Carbon";
+import Toolbar from "./components/Toolbar";
+import Main from './components/Main';
 import Problem from "./components/Problem";
 import Solution from "./components/Solution";
 import Bizniz from "./components/Bizniz";
-import Toolbar from "./components/Toolbar";
-import Carbon from "./components/Carbon";
+import WhoWeAre from "./components/WhoWeAre";
 
 Vue.use(VueDummy);
 Vue.use(VueClipboard);
 Vue.use(Vuetify);
 Vue.use(d3);
-Vue.use(VueRouter);
+Vue.use(VueScrollTo);
 
 export default {
   name: 'App',
