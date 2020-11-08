@@ -8,7 +8,7 @@
                     >
             <Toolbar/>
         </v-app-bar>
-        <Carbon/>
+        <Carbon v-bind:carbonCapture="this.carbonCapture"/>
 
       <div id = "main">   <Main @childToParent="carbonCaptureClicked()"/>    </div>
       <div id = "problem">  <Problem/>  </div>
@@ -56,7 +56,6 @@ Vue.use(VueScrollTo, {
 
 export default {
     name: 'App',
-    carbonCapture: false,
     components: {
         Toolbar,
         WhoWeAre,
@@ -66,7 +65,10 @@ export default {
         Solution,
         Problem,
     },
-    data: () => ({}),
+    data: () => ({
+            carbonCapture: false,
+
+    }),
     methods: {
         carbonCaptureClicked(){
             console.log('luky is a bitch and button from app.vue works');

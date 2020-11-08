@@ -2,6 +2,7 @@
     <v-container class="svg-container">
         <svg class="carbon-svg">
         </svg>
+        <button class="temp-button" v-on:click="isCarbonCaptured()">fffffuuuck luky</button>
     </v-container>
 </template>
 
@@ -9,6 +10,7 @@
     import * as d3 from "d3";
     export default {
         name: "Carbon",
+        props:['carbonCapture',],
         data: function () {
             return {}
         },
@@ -77,6 +79,13 @@
                 // angle += 1;
             }
         },
+        watch: {
+            carbonCapture: function(val){
+                this.carbonCapture = val;
+                console.log('luky loves anal and value is passed in carbon ');
+                console.log(this.carbonCapture);
+            }
+        }
     }
 
 </script>
@@ -98,6 +107,14 @@
         width: 100%;
         height: 100%;
         border-radius: 2%;
+    }
+
+    .temp-button{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 300px;
+        color: yellow;
     }
 
 </style>

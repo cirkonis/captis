@@ -43,7 +43,7 @@
         },
         methods: {
             carbonCapture(){
-                console.log('luky sucks a fat ass dick and my button works :) ');
+                console.log('luky sucks a fat ass dick and my button works from main :) ');
                 this.carbonCaptureTrigger = !this.carbonCaptureTrigger;
                 console.log(this.carbonCaptureTrigger);
                 this.buttonExist = false;
@@ -57,10 +57,10 @@
     .captis-button{
         position: absolute;
         top: 115px;
-        right: 48%;
-        width: 55px;
-        height: 55px;
-        background-color: transparent;
+        right: 47%;
+        width: 70px;
+        height: 70px;
+        background-color: yellow;
         border-radius: 50%;
         z-index: 3;
         cursor: default;
