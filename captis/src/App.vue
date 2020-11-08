@@ -67,7 +67,6 @@ export default {
     },
     data: () => ({
             carbonCapture: false,
-
     }),
     methods: {
         carbonCaptureClicked(){

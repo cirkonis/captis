@@ -1,7 +1,9 @@
 <template>
     <v-container class="svg-container">
-        <svg class="carbon-svg">
+        <svg          v-if="!this.carbonCapture"
+                      class="carbon-svg">
         </svg>
+
     </v-container>
 </template>
 
@@ -65,7 +67,6 @@
 
 
             function ticked () {
-
                 gs
                  .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' });
 
