@@ -20,7 +20,7 @@
                         <v-container class="link-container">
                             <v-icon class = "links" small color="#61BFF0" v-on:click="linkedInClick(person.linkdIn)">mdi-linkedin</v-icon>
                             <v-icon class = "links" small color="#61BFF0" v-on:click="emailClick(person.email, person.name)">mdi-email</v-icon>
-                            <v-icon class = "links" small color="#61BFF0" v-on:click="moreInfoClick()">mdi-information-outline</v-icon>
+<!--                            <v-icon class = "links" small color="#61BFF0" v-on:click="moreInfoClick()">mdi-information-outline</v-icon>-->
                         </v-container>
                         </v-card>
                      </div>

@@ -1,6 +1,10 @@
 <template>
     <div>
         <div class="logo">
+            <div v-if="this.buttonExist">
+            <button class="captis-button" v-on:click="carbonCapture()">
+            </button>
+            </div>
             <v-img
                     alt="Vuetify Logo"
                     class="shrink mr-2"
@@ -29,13 +33,42 @@
     export default{
         data: function(){
             return{
+                buttonExist: true,
+                props:{
+                    carbonCaptureTrigger: false,
+                },
              message: "Well hello there! Aren't you a curios one. Please excuse our mess, excessive use of lorem ipsum, grammar, spelling, and Mike's strange filler text." +
                  " We will be up and running in no time ;)"
             }
-        }
+        },
+        methods: {
+            carbonCapture(){
+                console.log('luky sucks a fat ass dick and my button works :) ');
+                this.carbonCaptureTrigger = !this.carbonCaptureTrigger;
+                console.log(this.carbonCaptureTrigger);
+                this.buttonExist = false;
+                this.$emit('childToParent', this.carbonCaptureTrigger);
+                return this.carbonCaptureTrigger;
+            }
+        },
     }
 </script>
 <style>
+    .captis-button{
+        position: absolute;
+        top: 115px;
+        right: 48%;
+        width: 55px;
+        height: 55px;
+        background-color: transparent;
+        border-radius: 50%;
+        z-index: 3;
+        cursor: default;
+        outline: none;
+    }
+    captis-button:hover{
+        color: transparent;
+    }
     .main{
         display: flex;
         align-content: center;

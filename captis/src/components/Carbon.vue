@@ -9,13 +9,15 @@
     import * as d3 from "d3";
     export default {
         name: "Carbon",
-
         data: function () {
             return {}
         },
         mounted() {
+            // let angle = 0;
             let svg = d3.select('.carbon-svg');
             let g = svg.append('g');
+            let width = window.innerWidth;
+            // let height = window.innerheight;
             let bonds = [];
             let numNodes = Math.pow(3, 6);
             let nodes = [];
@@ -27,9 +29,9 @@
                     bonds.push({source: i + 1, target: i+2});
                 }
             let edges = bonds;
-            let forceSimulation = d3.forceSimulation()
-                .force('link', d3.forceLink())
-                .force('charge', d3.forceManyBody())
+            let forceSimulation = d3.forceSimulation(nodes)
+                .force('link', d3.forceLink().strength(1.3))
+                .force('charge', d3.forceManyBody().strength(-20))
                 .force('center', d3.forceCenter());
             forceSimulation.nodes(nodes)
                 .on('tick', ticked);
@@ -37,8 +39,8 @@
                 .links(edges)
                 .distance(.5);
             forceSimulation.force('center')
-                .x(window.innerWidth / 2)
-                .y(125);
+                .x(width / 2 - 50)
+                .y(130);
             let links = g.append('g')
                 .selectAll('line')
                 .data(edges)
@@ -64,13 +66,15 @@
             function ticked () {
 
                 gs
-                 .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
+                 .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' });
 
                 links
                     .attr('x1', function (d) { return d.source.x })
                     .attr('y1', function (d) { return d.source.y })
                     .attr('x2', function (d) { return d.target.x })
                     .attr('y2', function (d) { return d.target.y });
+
+                // angle += 1;
             }
         },
     }

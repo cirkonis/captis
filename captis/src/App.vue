@@ -10,7 +10,7 @@
         </v-app-bar>
         <Carbon/>
 
-      <div id = "main">   <Main/>    </div>
+      <div id = "main">   <Main @childToParent="carbonCaptureClicked()"/>    </div>
       <div id = "problem">  <Problem/>  </div>
       <div id = "solution">  <Solution/> </div>
       <div id = "bizniz">  <Bizniz/>   </div>
@@ -55,21 +55,25 @@ Vue.use(VueScrollTo, {
 });
 
 export default {
-  name: 'App',
-
-components: {
-    Toolbar,
-    WhoWeAre,
-    Main,
-    Carbon,
-    Bizniz,
-    Solution,
-    Problem,
-  },
-  data: () => ({
-
-  }),
-};
+    name: 'App',
+    carbonCapture: false,
+    components: {
+        Toolbar,
+        WhoWeAre,
+        Main,
+        Carbon,
+        Bizniz,
+        Solution,
+        Problem,
+    },
+    data: () => ({}),
+    methods: {
+        carbonCaptureClicked(){
+            console.log('luky is a bitch and button from app.vue works');
+            this.carbonCapture = true;
+        }
+    },
+}
 </script>
 <style>
     .app-bar{
