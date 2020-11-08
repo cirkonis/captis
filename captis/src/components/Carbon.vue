@@ -2,7 +2,6 @@
     <v-container class="svg-container">
         <svg class="carbon-svg">
         </svg>
-        <button class="temp-button" v-on:click="isCarbonCaptured()">fffffuuuck luky</button>
     </v-container>
 </template>
 

@@ -60,7 +60,7 @@
         right: 47%;
         width: 70px;
         height: 70px;
-        background-color: yellow;
+        background-color: transparent;
         border-radius: 50%;
         z-index: 3;
         cursor: default;
