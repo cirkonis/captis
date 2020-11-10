@@ -56,14 +56,14 @@
 <style>
     .captis-button{
         position: absolute;
-        top: 115px;
-        right: 47%;
-        width: 70px;
-        height: 70px;
+        top: 2%;
+        right: 46%;
+        width: 150px;
+        height: 200px;
         background-color: transparent;
-        border-radius: 50%;
+        border-radius: 20%;
         z-index: 3;
-        cursor: default;
+        cursor: pointer;
         outline: none;
     }
     captis-button:hover{

@@ -1,7 +1,11 @@
 <template>
     <v-container class="svg-container">
-        <svg          v-if="!this.carbonCapture"
-                      class="carbon-svg">
+        <svg              class="carbon-svg">
+        </svg>
+
+        <svg          v-if="this.carbonCapture"
+                      class="carbon-capture-svg">
+
         </svg>
 
     </v-container>
@@ -42,7 +46,7 @@
                 .links(edges)
                 .distance(.5);
             forceSimulation.force('center')
-                .x(width / 2 - 50)
+                .x(width / 2 - 70)
                 .y(130);
             let links = g.append('g')
                 .selectAll('line')
@@ -78,12 +82,19 @@
 
                 // angle += 1;
             }
+
+
+
+
+
+
         },
         watch: {
             carbonCapture: function(val){
                 this.carbonCapture = val;
                 console.log('luky loves anal and value is passed in carbon ');
                 console.log(this.carbonCapture);
+                this.d3.select(".carbon-svg").remove();
             }
         }
     }
@@ -93,28 +104,25 @@
 <style>
     .svg-container{
         position: absolute;
-        top: 0%;
+        top: 0;
         left: 3.5%;
         display: flex;
         opacity: .3;
         width: 100%;
         height: 100%;
-        border-radius: 2%;
         z-index: 0;
     }
 
     .carbon-svg{
         width: 100%;
         height: 100%;
-        border-radius: 2%;
+        z-index: 0;
     }
 
-    .temp-button{
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        top: 300px;
-        color: yellow;
+    .carbon-capture-svg{
+        width: 100%;
+        height: 100%;
+        z-index: 0;
     }
 
 </style>
