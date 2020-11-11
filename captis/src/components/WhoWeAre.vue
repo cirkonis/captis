@@ -20,7 +20,7 @@
                         <v-container class="link-container">
                             <v-icon class = "links" small color="#61BFF0" v-on:click="linkedInClick(person.linkdIn)">mdi-linkedin</v-icon>
                             <v-icon class = "links" small color="#61BFF0" v-on:click="emailClick(person.email, person.name)">mdi-email</v-icon>
-                            <v-icon class = "links" small color="#61BFF0" v-on:click="moreInfoClick()">mdi-information-outline</v-icon>
+<!--                            <v-icon class = "links" small color="#61BFF0" v-on:click="moreInfoClick()">mdi-information-outline</v-icon>-->
                         </v-container>
                         </v-card>
                      </div>
@@ -97,21 +97,16 @@
         },
         methods: {
             linkedInClick(linkdInLink){
-                console.log("link click works: " + linkdInLink);
                 window.open(linkdInLink);
             },
             emailClick(email, name){
-                console.log("email link works: " + email);
                 this.$copyText(email).then(function (e) {
                     alert('Email for ' + name + ' copied to your clipboard!' );
-                    console.log(e)
                 }, function (e) {
                     alert('Could not retrieve email');
-                    console.log(e)
                 });
             },
             moreInfoClick(){
-                console.log("more info icon clicked");
             }
         }
     }
