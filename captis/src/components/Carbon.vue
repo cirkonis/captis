@@ -101,8 +101,6 @@
         watch: {
             carbonCapture: function (val) {
                 this.carbonCapture = val;
-                console.log('luky loves anal and value is passed in carbon ');
-                console.log(this.carbonCapture);
                 this.makeSumCarbon('.carbon-capture-svg',150, 55, 44);
             },
         },

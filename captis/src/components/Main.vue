@@ -43,9 +43,7 @@
         },
         methods: {
             carbonCapture(){
-                console.log('luky sucks a fat ass dick and my button works from main :) ');
                 this.carbonCaptureTrigger = !this.carbonCaptureTrigger;
-                console.log(this.carbonCaptureTrigger);
                 this.buttonExist = false;
                 this.$emit('childToParent', this.carbonCaptureTrigger);
                 return this.carbonCaptureTrigger;

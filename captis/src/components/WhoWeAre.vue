@@ -97,21 +97,16 @@
         },
         methods: {
             linkedInClick(linkdInLink){
-                console.log("link click works: " + linkdInLink);
                 window.open(linkdInLink);
             },
             emailClick(email, name){
-                console.log("email link works: " + email);
                 this.$copyText(email).then(function (e) {
                     alert('Email for ' + name + ' copied to your clipboard!' );
-                    console.log(e)
                 }, function (e) {
                     alert('Could not retrieve email');
-                    console.log(e)
                 });
             },
             moreInfoClick(){
-                console.log("more info icon clicked");
             }
         }
     }

@@ -59,7 +59,6 @@
             },
         methods: {
             buttonWorks(){
-                console.log('button works')
             },
             scrollMeTo(refName) {
                 const element = this.$els[refName];

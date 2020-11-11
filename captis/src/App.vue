@@ -70,7 +70,6 @@ export default {
     }),
     methods: {
         carbonCaptureClicked(){
-            console.log('luky is a bitch and button from app.vue works');
             this.carbonCapture = true;
         }
     },
