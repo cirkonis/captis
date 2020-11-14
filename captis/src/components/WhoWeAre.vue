@@ -100,9 +100,9 @@
                 window.open(linkdInLink);
             },
             emailClick(email, name){
-                this.$copyText(email).then(function (e) {
+                this.$copyText(email).then(function () {
                     alert('Email for ' + name + ' copied to your clipboard!' );
-                }, function (e) {
+                }, function () {
                     alert('Could not retrieve email');
                 });
             },
