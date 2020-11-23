@@ -9,7 +9,7 @@
             <v-list-item>
                 <v-list-item-avatar
                         tile
-                        size="500"
+                        size="450"
                         color="transparent"
                 >
                     <img src="../assets/marketPics/solution.png">
@@ -24,27 +24,8 @@
                         <p class="solution-text">{{messagePart2}}</p>
                     </v-list-item-content>
                 </v-list-item-content>
-
-
             </v-list-item>
         </v-card>
-<!--        <v-container class = "solution-svg-container">-->
-<!--            <v-col>-->
-<!--                <v-row>-->
-<!--                    <svg class="solution-svg"></svg>-->
-<!--                </v-row>-->
-<!--            </v-col>-->
-<!--        </v-container>-->
-<!--        <v-container class = "solution-text-container">-->
-<!--            <v-col>-->
-<!--                <v-row><h1 class="how">How</h1></v-row>-->
-<!--                <v-row>-->
-<!--                    <p class="solution-text">{{messagePart1}}</p>-->
-<!--                    <p class="solution-text">{{messagePart2}}</p>-->
-<!--&lt;!&ndash;                    <p class="solution-text" v-dummy = "150"></p>&ndash;&gt;-->
-<!--                </v-row>-->
-<!--            </v-col>-->
-<!--        </v-container>-->
     </v-container>
 </template>
 
@@ -105,37 +86,4 @@
         color: #2D2B1F;
         background-color: white;
     }
-
-    /*.solution-text-container{*/
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    text-align: right;*/
-    /*    font-family: "Trebuchet MS";*/
-    /*    font-style: normal;*/
-    /*    font-size: 20px;*/
-    /*    color: #27214C;*/
-    /*}*/
-
-    /*.solution-svg-container{*/
-    /*    display: flex;*/
-    /*    flex-direction: column-reverse;*/
-    /*}*/
-
-    /*.solution-text{*/
-    /*    display: inline;*/
-    /*    text-align: right;*/
-    /*    font-family: "Trebuchet MS", serif;*/
-    /*    font-size: 20px;*/
-    /*    color: #2D2B1F;*/
-    /*}*/
-
-    /*.solution-svg{*/
-    /*    width: 400px;*/
-    /*    height: 600px;*/
-    /*    display: inline;*/
-    /*    background-color: #61BFF0;*/
-    /*    !*background-color: white;*!*/
-    /*    margin-left: 20px;*/
-    /*    margin-top: 30px;*/
-    /*}*/
 </style>

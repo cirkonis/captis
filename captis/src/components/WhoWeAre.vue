@@ -82,7 +82,7 @@
                         description: "Autonomous Systems",
                         picture: "z.jpg",
                         linkdIn: "http://linkedin.com",
-                        email:"s165036@student.dtu.dk",
+                        email:"s203397@student.dtu.dk",
                     },
                     {
                         id: 5,
