@@ -39,7 +39,7 @@
                     "In an energy-efficient operation, the CO2 is then stripped off the absorbing material, transferred and " +
                     "stored at high pressure and low temperature in a cryogenic tank, ready for transportation and further useage. " +
                     "The solvent is recycled and re-enters the carbon capture cycle once more.",
-                messagePart2: "This operation is specialized for offshore operations and can be used on drilling rigs, oil platforms, transport vessels and more. " +
+                messagePart2:
                     "The solution is scalable to any amount of CO2 desired to capture and store. " +
                     "This is possible due to the compact design of the CCS unit. " +
                     "For instance, a unit on a drilling rig, capturing 20 tons of CO2 per week is dimensioned at around 5 by 2 meters on the ground and a height of just 3 meters. " +
@@ -85,5 +85,6 @@
         font-size: 20px;
         color: #2D2B1F;
         background-color: white;
+        line-height: 1.2;
     }
 </style>

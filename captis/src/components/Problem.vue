@@ -34,17 +34,14 @@
         name: "Problem",
         data: function() {
             return {
-                messagePart1: "The Captis process is the modern, economical way of capturing and storing post combustion CO2. " +
-                    "An amine-based solvent is used to bind and absorb carbon dioxide from post-combustion exhaust gases. " +
-                    "In an energy-efficient operation, the CO2 is then stripped off the absorbing material, transferred and " +
-                    "stored at high pressure and low temperature in a cryogenic tank, ready for transportation and further useage. " +
-                    "The solvent is recycled and re-enters the carbon capture cycle once more.",
-                messagePart2: "This operation is specialized for offshore operations and can be used on drilling rigs, oil platforms, transport vessels and more. " +
-                    "The solution is scalable to any amount of CO2 desired to capture and store. " +
-                    "This is possible due to the compact design of the CCS unit. " +
-                    "For instance, a unit on a drilling rig, capturing 20 tons of CO2 per week is dimensioned at around 5 by 2 meters on the ground and a height of just 3 meters. " +
-                    "The storage units come in the design of regular shipping containers for simple and standardized handling."
-            }
+                messagePart1: "We are an international team of dedicated engineers and entrepreneurs headquartered in the Capitol Region of Denmark.",
+
+                messagePart2: "Captis provides a solution specialized for offshore operations and can be used on drilling rigs, oil platforms, transport vessels and more. " +
+                    "We focus our efforts in the North Sea and more specifically in Norwegian waters. " +
+                    "With the application of the most energy-efficient process available, CCS is possible at a rate below the cost of the carbon tax in Norway, " +
+                    "providing an additional financial incentive, besides the created corporate social responsibility value for customers.",
+
+        }
         }
     }
 </script>
@@ -84,7 +81,7 @@
         font-family: "Trebuchet MS", serif;
         font-size: 20px;
         color: #2D2B1F;
-        background-color: white;
+        line-height: 1.2;
     }
 </style>
 

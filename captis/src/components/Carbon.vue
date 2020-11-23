@@ -101,7 +101,7 @@
         watch: {
             carbonCapture: function (val) {
                 this.carbonCapture = val;
-                this.makeSumCarbon('.carbon-capture-svg',150, 55, 40);
+                this.makeSumCarbon('.carbon-capture-svg',175, 55, 5);
             },
         },
          methods: {

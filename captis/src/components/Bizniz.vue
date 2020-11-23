@@ -16,13 +16,16 @@
                     <v-list-item-content class="solution-text text">
                         <p class="solution-text">{{messagePart2}}</p>
                     </v-list-item-content>
+<!--                    <v-list-item-content class="solution-text text">-->
+<!--                        <p class="solution-text">{{messagePart3}}</p>-->
+<!--                    </v-list-item-content>-->
                 </v-list-item-content>
                 <v-list-item-avatar
                         tile
                         size="500"
                         color="transparent"
                 >
-                    <img src="../assets/marketPics/solution.png">
+                    <img src="../assets/marketPics/unSustain.png">
                 </v-list-item-avatar>
             </v-list-item>
         </v-card>
@@ -34,17 +37,12 @@
         name: "Bizniz",
         data: function() {
             return {
-                messagePart1: "The Captis process is the modern, economical way of capturing and storing post combustion CO2. " +
-                    "An amine-based solvent is used to bind and absorb carbon dioxide from post-combustion exhaust gases. " +
-                    "In an energy-efficient operation, the CO2 is then stripped off the absorbing material, transferred and " +
-                    "stored at high pressure and low temperature in a cryogenic tank, ready for transportation and further useage. " +
-                    "The solvent is recycled and re-enters the carbon capture cycle once more.",
-                messagePart2: "This operation is specialized for offshore operations and can be used on drilling rigs, oil platforms, transport vessels and more. " +
-                    "The solution is scalable to any amount of CO2 desired to capture and store. " +
-                    "This is possible due to the compact design of the CCS unit. " +
-                    "For instance, a unit on a drilling rig, capturing 20 tons of CO2 per week is dimensioned at around 5 by 2 meters on the ground and a height of just 3 meters. " +
-                    "The storage units come in the design of regular shipping containers for simple and standardized handling."
-            }
+                messagePart1:"How impactful the implementation of this solution can be is visible by the sheer amount of UN Sustainability Development Goals that are influenced. Goal 7 is maybe the most obvious impact, but due to the significance of the reduction of carbon emissions to fulfil the aim of the Paris Climate Agreement, several other SDG´s are also affected.",
+                messagePart2:"To act on climate change and stop the warming of the planet, carbon capture is essential. If the trend of the rise of the amount of CO2 in the atmosphere can be mitigated and reversed, the stability of eco-systems and life both on land and below water can be secured and ongoing species extinction can be stopped.",
+                messagePart3: "The Paris Climate Agreement states that the goal of median warming of 2°C maximum is only achievable with the use of CCS. It is because of this importance that broad use of this technology in all industrial sectors worldwide is necessary."
+
+
+        }
         }
     }
 </script>
@@ -85,5 +83,6 @@
         font-size: 20px;
         color: #2D2B1F;
         background-color: white;
+        line-height: 1.2;
     }
 </style>
