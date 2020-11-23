@@ -23,7 +23,7 @@
         },
         mounted() {
             this.makeSumCarbon('.carbon-svg', 130, 70, -22);
-            this.makeSumCarbon('.carbon-svg', 2530, 70, -22);
+            this.makeSumCarbon('.carbon-svg', 2530, 150, -22);
 
             // let svg = d3.select('.carbon-svg');
             // let g = svg.append('g');
@@ -101,7 +101,7 @@
         watch: {
             carbonCapture: function (val) {
                 this.carbonCapture = val;
-                this.makeSumCarbon('.carbon-capture-svg',150, 55, 44);
+                this.makeSumCarbon('.carbon-capture-svg',175, 55, 5);
             },
         },
          methods: {

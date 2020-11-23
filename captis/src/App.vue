@@ -10,11 +10,11 @@
         </v-app-bar>
         <Carbon v-bind:carbonCapture="this.carbonCapture"/>
 
-      <div id = "main">   <Main @childToParent="carbonCaptureClicked()"/>    </div>
-      <div id = "problem">  <Problem/>  </div>
-      <div id = "solution">  <Solution/> </div>
-      <div id = "bizniz">  <Bizniz/>   </div>
-      <div id = "who"> <WhoWeAre/>  </div>
+      <div id = "main" class="what">   <Main @childToParent="carbonCaptureClicked()"/>    </div>
+      <div id = "problem" class="where">  <Problem/>  </div>
+      <div id = "solution" class="how">  <Solution/> </div>
+      <div id = "bizniz" class="why">  <Bizniz/>   </div>
+      <div id = "who" class="who"> <WhoWeAre/>  </div>
   </v-app>
 </template>
 
@@ -77,6 +77,38 @@ export default {
 </script>
 <style>
     .app-bar{
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
+
+    .what{
+        padding-top: 20px;
+    }
+
+    .where{
+        padding-top: 20px;
+
+    }
+
+    .how{
+        padding-top: 20px;
+
+    }
+
+    .why{
+        padding-top: 20px;
+
+    }
+
+    .who{
+        padding-top: 20px;
+
+    }
+
+
+
+
+
+
+
+
 </style>

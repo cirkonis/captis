@@ -23,7 +23,14 @@
         </v-row>
         <v-row>
             <p class="flufferMcflufferton">{{message}}</p>
-            <p class="flufferMcflufferton" v-dummy = "100"></p>
+        </v-row>
+        <v-row class="contact-button">
+            <v-btn class="white--text"
+                   color="#61BFF0"
+                   elevation="2"
+                   large
+                   rounded
+                   v-on:click="getContact()">Say Hello</v-btn>
         </v-row>
     </v-col>
     </v-container>
@@ -37,8 +44,7 @@
                 props:{
                     carbonCaptureTrigger: false,
                 },
-             message: "Well hello there! Aren't you a curios one. Please excuse our mess, excessive use of lorem ipsum, grammar, spelling, and Mike's strange filler text." +
-                 " We will be up and running in no time ;)"
+             message: "A cost efficient and effective solution to a problem that affects us all. Contact us to find out more or read on below to learn how it is we do what we do."
             }
         },
         methods: {
@@ -47,6 +53,15 @@
                 this.buttonExist = false;
                 this.$emit('childToParent', this.carbonCaptureTrigger);
                 return this.carbonCaptureTrigger;
+            },
+
+            getContact(){
+                console.log('buttonworks');
+                this.$copyText('hello@captis.dk').then(function () {
+                    alert('hello@captis.dk copied to your clipboard!' );
+                }, function () {
+                    alert('Could not retrieve email');
+                });
             }
         },
     }
@@ -100,5 +115,13 @@
         top:5%;
         left: 35%;
         margin-top: 20px;
+    }
+
+    .contact-button{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
     }
 </style>

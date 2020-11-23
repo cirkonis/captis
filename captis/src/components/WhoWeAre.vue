@@ -1,7 +1,8 @@
 <template>
             <v-container fluid class="people-container">
                 <v-container>
-                    <v-row class="header"><h1>Who</h1></v-row>
+                    <v-row class="header"><h1>WHO</h1></v-row>
+<!--                    <v-row class="sub-header"><h1>we are</h1></v-row>-->
                 </v-container>
                 <v-col cols="8">
 
@@ -24,6 +25,15 @@
                         </v-container>
                         </v-card>
                      </div>
+                    </v-row>
+                    <v-row class="say-hello">Feel free to contact any one of us or simply send the team a message at hello@captis.dk</v-row>
+                    <v-row class="contact-button">
+                        <v-btn class="white--text"
+                               color="#61BFF0"
+                               elevation="2"
+                               large
+                               rounded
+                               v-on:click="emailClick('hello@captis.dk', 'hello@captis.dk')">Say Hello</v-btn>
                     </v-row>
                 </v-col>
         </v-container>
@@ -82,7 +92,7 @@
                         description: "Autonomous Systems",
                         picture: "z.jpg",
                         linkdIn: "http://linkedin.com",
-                        email:"s165036@student.dtu.dk",
+                        email:"s203397@student.dtu.dk",
                     },
                     {
                         id: 5,
@@ -122,6 +132,16 @@
     color: #61BFF0;
     padding-top: 30px;
 }
+/*.sub-header{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    text-align: center;*/
+/*    font-family: "Trebuchet MS";*/
+/*    font-style: normal;*/
+/*    font-size: 12px;*/
+/*    color: #61BFF0;*/
+/*    padding-top: -10px;*/
+/*}*/
 .people-container{
     display: flex;
     flex-direction: row;
@@ -195,5 +215,26 @@
     bottom: 15px;
     width: 15px;
     height: 15px;
+}
+
+.say-hello{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: "Trebuchet MS";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #27214C;
+    padding-top: 25px;
+}
+
+.contact-button{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    padding-top: 20px;
 }
 </style>

@@ -1,21 +1,34 @@
 <template>
-    <v-container class="bizniz-container">
-        <v-container class = "bizniz-text-container">
-            <v-col>
-                <v-row><h1>Why</h1></v-row>
-                <v-row>
-                    <p class="bizniz-text">{{message}}</p>
-                    <p class="bizniz-text" v-dummy = "50"></p>
-                </v-row>
-            </v-col>
-        </v-container>
-        <v-container class = "bizniz-svg-container">
-            <v-col>
-                <v-row>
-                    <svg class="bizniz-svg"></svg>
-                </v-row>
-            </v-col>
-        </v-container>
+    <v-container class="solution-container">
+        <v-card
+                class="mx-auto"
+                max-width=100%
+                elevation="0"
+                color="transparent"
+        >
+            <v-list-item>
+                <v-list-item-content>
+                    <v-list-item-title class="how">WHY</v-list-item-title>
+                    <v-list-item-title class="title mb-1 text subtitle">we want to do it</v-list-item-title>
+                    <v-list-item-content class="solution-text text">
+                        <p class="solution-text">{{messagePart1}}</p>
+                    </v-list-item-content>
+                    <v-list-item-content class="solution-text text">
+                        <p class="solution-text">{{messagePart2}}</p>
+                    </v-list-item-content>
+<!--                    <v-list-item-content class="solution-text text">-->
+<!--                        <p class="solution-text">{{messagePart3}}</p>-->
+<!--                    </v-list-item-content>-->
+                </v-list-item-content>
+                <v-list-item-avatar
+                        tile
+                        size="500"
+                        color="transparent"
+                >
+                    <img src="../assets/marketPics/unSustain.png">
+                </v-list-item-avatar>
+            </v-list-item>
+        </v-card>
     </v-container>
 </template>
 
@@ -23,55 +36,53 @@
     export default {
         name: "Bizniz",
         data: function() {
-            return{
-             message: "Why we do what we do may kinda sounds obvious but it is a solution with two parts. Carbon capture for the sake of the " +
-                 "environment obviously, and carbon selling which is kinda like carbon usage just that we dont know how to use " +
-                 "it so thats someone elses problem I guess. Plus we want some say in how gets used so its not just for " +
-                 "stuff that will put the c02 right back in the air anyway. So what ever here we talk about our 'businessmodel' and " +
-                 "monies and stuff"
-            }
-        }
+            return {
+                messagePart1:"How impactful the implementation of this solution can be is visible by the sheer amount of UN Sustainability Development Goals that are influenced. Goal 7 is maybe the most obvious impact, but due to the significance of the reduction of carbon emissions to fulfil the aim of the Paris Climate Agreement, several other SDG´s are also affected.",
+                messagePart2:"To act on climate change and stop the warming of the planet, carbon capture is essential. If the trend of the rise of the amount of CO2 in the atmosphere can be mitigated and reversed, the stability of eco-systems and life both on land and below water can be secured and ongoing species extinction can be stopped.",
+                messagePart3: "The Paris Climate Agreement states that the goal of median warming of 2°C maximum is only achievable with the use of CCS. It is because of this importance that broad use of this technology in all industrial sectors worldwide is necessary."
 
+
+        }
+        }
     }
 </script>
 
 <style scoped>
-
-    .bizniz-container{
+    .how{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-family: "Trebuchet MS";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        color: #27214C;
+    }
+    .subtitle{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-family: "Trebuchet MS";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        color: #61BFF0;
+    }
+    .solution-container{
         display: flex;
         justify-content: space-between;
         align-content: space-between;
         padding-top: 10px;
+        height: 500px;
     }
 
-    .bizniz-text-container{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        font-family: "Trebuchet MS";
-        font-style: normal;
-        font-size: 20px;
-        color: #27214C;
-    }
-
-    .bizniz-svg-container{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .bizniz-text{
+    .solution-text{
         display: inline;
+        text-align: left;
         font-family: "Trebuchet MS", serif;
-        font-size: 18px;
+        font-size: 20px;
         color: #2D2B1F;
-    }
-
-    .bizniz-svg{
-        width: 400px;
-        height: 400px;
-        display: inline;
-        background-color: #61BFF0;
-        margin-left: 20px;
-        margin-top: 30px;
+        background-color: white;
+        line-height: 1.2;
     }
 </style>
