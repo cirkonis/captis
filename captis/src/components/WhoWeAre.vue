@@ -9,7 +9,7 @@
                     <v-row class="people-row"  >
                      <div     v-for="person in people"
                               :key="person.id">
-                        <v-img class="people-pics" v-bind:src="require('../assets/peoplePics/' + person.picture)"></v-img>
+                        <v-img class="people-pics" v-bind:src="require('../assets/newPhotos/' + person.picture)"></v-img>
 
                         <v-card
                                 class="people-cards mx-auto"
