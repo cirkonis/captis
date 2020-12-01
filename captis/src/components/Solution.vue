@@ -1,26 +1,49 @@
 <template>
-    <v-container class="solution-container">
+    <v-container class="solution-container" col="11">
         <v-card
-                class="mx-auto"
-                max-width=100%
+                :class="height"
                 elevation="0"
                 color="transparent"
         >
             <v-list-item>
                 <v-list-item-avatar
                         tile
-                        size="450"
+                        :size="size"
                         color="transparent"
                 >
                     <img src="../assets/marketPics/solution.png">
                 </v-list-item-avatar>
                 <v-list-item-content>
-                    <v-list-item-title class="how">HOW</v-list-item-title>
-                    <v-list-item-title class="title mb-1 text subtitle">we do what we do</v-list-item-title>
-                    <v-list-item-content class="solution-text text">
+                    <v-list-item-title class="how
+        text-xs-h6
+        text-sm-h5
+        text-md-h4
+        text-lg-h3
+        text-xl-h2
+        text-justify">HOW</v-list-item-title>
+                    <v-list-item-title class="title mb-1 text subtitle
+        text-xs-body-1
+        text-sm-h6
+        text-md-h5
+        text-lg-h4
+        text-xl-h3
+        text-justify">we do what we do</v-list-item-title>
+                    <v-list-item-content class="solution-text text
+        text-xs-body-2
+        text-sm-body-1
+        text-md-h6
+        text-lg-h4
+        text-xl-h3
+        text-justify">
                         <p class="solution-text">{{messagePart1}}</p>
                     </v-list-item-content>
-                    <v-list-item-content class="solution-text text">
+                    <v-list-item-content class="solution-text text
+        text-xs-body-2
+        text-sm-body-1
+        text-md-h6
+        text-lg-h4
+        text-xl-h3
+        text-justify">
                         <p class="solution-text">{{messagePart2}}</p>
                     </v-list-item-content>
                 </v-list-item-content>
@@ -45,7 +68,42 @@
                     "For instance, a unit on a drilling rig, capturing 20 tons of CO2 per week is dimensioned at around 5 by 2 meters on the ground and a height of just 3 meters. " +
                     "The storage units come in the design of regular shipping containers for simple and standardized handling."
             }
-        }
+        },
+        computed: {
+            height: function() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'xs':
+                        return 1000;
+                    case 'sm':
+                        return 700;
+                    case 'md':
+                        return 600;
+                    case 'lg':
+                        return 900;
+                    case 'xl':
+                        return 1000;
+                    default:
+                        return 900;
+                }
+            },
+
+            size: function() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'xs':
+                        return 150;
+                    case 'sm':
+                        return 150;
+                    case 'md':
+                        return 400;
+                    case 'lg':
+                        return 500;
+                    case 'xl':
+                        return 600;
+                    default:
+                        return 300;
+                }
+            },
+        },
     }
 </script>
 
@@ -57,7 +115,6 @@
         font-family: "Trebuchet MS";
         font-style: normal;
         font-weight: bold;
-        font-size: 36px;
         color: #27214C;
     }
     .subtitle{
@@ -67,7 +124,6 @@
         font-family: "Trebuchet MS";
         font-style: normal;
         font-weight: bold;
-        font-size: 36px;
         color: #61BFF0;
     }
     .solution-container{
@@ -75,14 +131,12 @@
         justify-content: space-between;
         align-content: space-between;
         padding-top: 10px;
-        height: 500px;
     }
 
     .solution-text{
         display: inline;
         text-align: right;
         font-family: "Trebuchet MS", serif;
-        font-size: 20px;
         color: #2D2B1F;
         background-color: white;
         line-height: 1.2;

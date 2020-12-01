@@ -4,7 +4,7 @@
                     <v-row class="header"><h1>WHO</h1></v-row>
 <!--                    <v-row class="sub-header"><h1>we are</h1></v-row>-->
                 </v-container>
-                <v-col cols="6" xl="6" lg="6" md="6" sm="10" xs="12" >
+                <v-col cols="12" xl="10" lg="8" md="6" sm="4" xs="2" >
                     <v-row class="people-row"  >
                      <div
                                v-for="person in people"
@@ -156,8 +156,8 @@
     align-content: center;
     justify-items: center;
     /* top | right | bottom | left */
-    margin: 0 10% 10px 10%;
-    width: 200px;
+    margin: 0 50px 10px 50px;
+    width: 180px;
     height: 100px;
     background-color: transparent;
 }
@@ -167,8 +167,8 @@
     margin-right: auto;
     margin-top: 20px;
     object-fit: cover;
-    width: 175px;
-    height: 225px;
+    width: 200px;
+    height: 275px;
     object-fit: cover;
     object-position: 0% 20%;
 }

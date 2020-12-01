@@ -1,25 +1,48 @@
 <template>
-    <v-container class="solution-container">
+    <v-container class="solution-container"  col="11">
         <v-card
-                class="mx-auto"
-                max-width=100%
+                :class="height"
                 elevation="0"
                 color="transparent"
         >
             <v-list-item>
                 <v-list-item-content>
-                    <v-list-item-title class="how">WHERE</v-list-item-title>
-                    <v-list-item-title class="title mb-1 text subtitle">we work</v-list-item-title>
-                    <v-list-item-content class="solution-text text">
+                    <v-list-item-title class="how
+        text-xs-h6
+        text-sm-h5
+        text-md-h4
+        text-lg-h3
+        text-xl-h2
+        text-justify">WHERE</v-list-item-title>
+                    <v-list-item-title class="title mb-1 text subtitle
+        text-xs-body-1
+        text-sm-h6
+        text-md-h5
+        text-lg-h4
+        text-xl-h3
+        text-justify">we work</v-list-item-title>
+                    <v-list-item-content class="solution-text text
+        text-xs-body-2
+        text-sm-body-1
+        text-md-h6
+        text-lg-h4
+        text-xl-h3
+        text-justify">
                         <p class="solution-text">{{messagePart1}}</p>
                     </v-list-item-content>
-                    <v-list-item-content class="solution-text text">
+                    <v-list-item-content class="solution-text text
+        text-xs-body-2
+        text-sm-body-1
+        text-md-h6
+        text-lg-h4
+        text-xl-h3
+        text-justify">
                         <p class="solution-text">{{messagePart2}}</p>
                     </v-list-item-content>
                 </v-list-item-content>
                 <v-list-item-avatar
                         tile
-                        size="400"
+                        :size="size"
                         color="transparent"
                 >
                     <img src="../assets/marketPics/captisTech.png">
@@ -42,7 +65,42 @@
                     "providing an additional financial incentive, besides the created corporate social responsibility value for customers.",
 
         }
-        }
+        },
+        computed: {
+            height: function() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'xs':
+                        return 1000;
+                    case 'sm':
+                        return 700;
+                    case 'md':
+                        return 600;
+                    case 'lg':
+                        return 900;
+                    case 'xl':
+                        return 1000;
+                    default:
+                        return 900;
+                }
+            },
+
+            size: function() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'xs':
+                        return 150;
+                    case 'sm':
+                        return 150;
+                    case 'md':
+                        return 400;
+                    case 'lg':
+                        return 500;
+                    case 'xl':
+                        return 600;
+                    default:
+                        return 300;
+                }
+            },
+        },
     }
 </script>
 
@@ -64,7 +122,6 @@
         font-family: "Trebuchet MS";
         font-style: normal;
         font-weight: bold;
-        font-size: 36px;
         color: #61BFF0;
     }
     .solution-container{
@@ -72,14 +129,12 @@
         justify-content: space-between;
         align-content: space-between;
         padding-top: 10px;
-        height: 500px;
     }
 
     .solution-text{
         display: inline;
         text-align: left;
         font-family: "Trebuchet MS", serif;
-        font-size: 20px;
         color: #2D2B1F;
         line-height: 1.2;
     }

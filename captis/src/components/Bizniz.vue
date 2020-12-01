@@ -1,19 +1,42 @@
 <template>
-    <v-container class="solution-container">
+    <v-container class="solution-container" col="11">
         <v-card
-                :width= "width"
                 :height="height"
                 elevation="0"
                 color="transparent"
         >
             <v-list-item>
                 <v-list-item-content>
-                            <v-list-item-title class="how">WHY</v-list-item-title>
-                    <v-list-item-title class="title mb-1 text subtitle">we want to do it</v-list-item-title>
-                    <v-list-item-content class="solution-text text">
+                            <v-list-item-title class="how
+        text-xs-h6
+        text-sm-h5
+        text-md-h4
+        text-lg-h3
+        text-xl-h2
+        text-justify ">WHY</v-list-item-title>
+                    <v-list-item-title class="title mb-1 text subtitle
+        text-xs-body-1
+        text-sm-h6
+        text-md-h5
+        text-lg-h4
+        text-xl-h3
+        text-justify">we want to do it</v-list-item-title>
+                    <v-list-item-content class="solution-text
+        text-xs-body-2
+        text-sm-body-1
+        text-md-h6
+        text-lg-h4
+        text-xl-h3
+        text-justify">
                             <p class="solution-text">{{messagePart1}}</p>
                     </v-list-item-content>
-                    <v-list-item-content class="solution-text text">
+                    <v-list-item-content class="solution-text
+        text-xs-body-2
+        text-sm-body-1
+        text-md-h5
+        text-lg-h4
+        text-xl-h3
+        text-justify">
                         <p class="solution-text">{{messagePart2}}</p>
                     </v-list-item-content>
 <!--                    <v-list-item-content class="solution-text text">-->
@@ -22,7 +45,7 @@
                 </v-list-item-content>
                 <v-list-item-avatar
                         tile
-                        size="500"
+                        :size="size"
                         color="transparent"
                 >
                     <img src="../assets/marketPics/unSustain.png">
@@ -46,34 +69,35 @@
             height: function() {
                 switch (this.$vuetify.breakpoint.name) {
                     case 'xs':
-                        return 220;
+                        return 1000;
                     case 'sm':
-                        return 400;
+                        return 700;
                     case 'md':
-                        return 500;
-                    case 'lg':
                         return 600;
+                    case 'lg':
+                        return 900;
                     case 'xl':
-                        return 800;
+                        return 1000;
                     default:
-                        return 500;
+                        return 900;
                 }
             },
-                width: function() {
-                    switch (this.$vuetify.breakpoint.name) {
-                        case 'xs':
-                            return 600;
-                        case 'sm':
-                            return 960;
-                        case 'md':
-                            return 1264;
-                        case 'lg':
-                            return 1904;
-                        case 'xl':
-                            return 2200;
-                        default:
-                            return 1264;
-                    }
+
+            size: function() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'xs':
+                        return 150;
+                    case 'sm':
+                        return 150;
+                    case 'md':
+                        return 400;
+                    case 'lg':
+                        return 500;
+                    case 'xl':
+                        return 600;
+                    default:
+                        return 300;
+                }
             },
         },
     }
@@ -102,17 +126,17 @@
     }
     .solution-container{
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-content: space-between;
         padding-top: 10px;
-        height: 500px;
     }
-
     .solution-text{
         display: inline;
         text-align: left;
         font-family: "Trebuchet MS", serif;
-        font-size: 20px;
+        /*font-size: 20px;*/
         color: #2D2B1F;
         background-color: white;
         line-height: 1.2;
