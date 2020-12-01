@@ -5,11 +5,12 @@
 <!--                    <v-row class="sub-header"><h1>we are</h1></v-row>-->
                 </v-container>
                 <v-col cols="8">
-
                     <v-row class="people-row"  >
-                     <div     v-for="person in people"
+                     <div
+                             elevation="1"
+                             v-for="person in people"
                               :key="person.id">
-                        <v-img class="people-pics" v-bind:src="require('../assets/newPhotos/' + person.picture)"></v-img>
+                        <img class="people-pics" v-bind:src="require('../assets/newPhotos/' + person.picture)">
 
                         <v-card
                                 class="people-cards mx-auto"
@@ -132,16 +133,7 @@
     color: #61BFF0;
     padding-top: 30px;
 }
-/*.sub-header{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    text-align: center;*/
-/*    font-family: "Trebuchet MS";*/
-/*    font-style: normal;*/
-/*    font-size: 12px;*/
-/*    color: #61BFF0;*/
-/*    padding-top: -10px;*/
-/*}*/
+
 .people-container{
     display: flex;
     flex-direction: row;
@@ -165,22 +157,28 @@
     align-content: center;
     justify-items: center;
     /* top | right | bottom | left */
-    margin: 5px 10% 10px 10%;
+    margin: 0 10% 10px 10%;
     width: 200px;
     height: 100px;
+    background-color: transparent;
 }
 .people-pics {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    width: 150px;
-    height: 200px;
+    object-fit: cover;
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    object-position: 0% 20%;
     border-radius: 50%;
+    z-index: 1;
 }
  .people-pics:hover{
     cursor: default;
   }
+
 
 .people-names{
     font-family: "Trebuchet MS", b,sans-serif;
