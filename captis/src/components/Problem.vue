@@ -15,14 +15,14 @@
         text-md-h4
         text-lg-h3
         text-xl-h2
-        text-justify">WHERE</v-list-item-title>
+        text-justify">WHAT</v-list-item-title>
                     <v-list-item-title class="title mb-1 text subtitle
         text-xs-body-1
         text-sm-h6
         text-md-h5
         text-lg-h4
         text-xl-h3
-        text-justify">we work</v-list-item-title>
+        text-justify">is Captis about</v-list-item-title>
                     <v-list-item-content class="solution-text text
         text-xs-body-2
         text-sm-body-1
@@ -40,6 +40,15 @@
         text-xl-h3
         text-justify">
                         <p class="solution-text">{{messagePart2}}</p>
+                    </v-list-item-content>
+                    <v-list-item-content class="solution-text text
+        text-xs-body-2
+        text-sm-body-1
+        text-md-h6
+        text-lg-h4
+        text-xl-h3
+        text-justify">
+                        <p class="solution-text">{{messagePart3}}</p>
                     </v-list-item-content>
                 </v-list-item-content>
                 <v-list-item-avatar
@@ -59,12 +68,25 @@
         name: "Problem",
         data: function() {
             return {
-                messagePart1: "We are an international team of dedicated engineers and entrepreneurs headquartered in the Capitol Region of Denmark.",
+               messagePart1: "Captis provides a solution for carbon capture specialized for offshore operations and can be used on " +
+                    "drilling rigs, oil platforms, transport vessels and more. We focus our efforts on the North Sea and " +
+                    "Norwegian waters, though with a product that is applicable all around the world. ",
 
-                messagePart2: "Captis provides a solution specialized for offshore operations and can be used on drilling rigs, oil platforms, transport vessels and more. " +
-                    "We focus our efforts in the North Sea and more specifically in Norwegian waters. " +
-                    "With the application of the most energy-efficient process available, CCS is possible at a rate below the cost of the carbon tax in Norway, " +
-                    "providing an additional financial incentive, besides the created corporate social responsibility value for customers.",
+               messagePart2:"Utilising the most " +
+                    "energy-efficient process available, CCS is possible at a rate below the cost of the carbon tax, " +
+                    "providing an excellent financial incentive besides the increased corporate social responsibility value for customers.",
+
+               messagePart3: "Captis consists of a team of interdisciplinary engineers and entrepreneurs in the Capitol Region of " +
+                        "Denmark, established from current and former students of the acclaimed DTU.",
+
+
+                //
+                // messagePart1: "We are an international team of dedicated engineers and entrepreneurs headquartered in the Capitol Region of Denmark.",
+                //
+                // messagePart2: "Captis provides a solution specialized for offshore operations and can be used on drilling rigs, oil platforms, transport vessels and more. " +
+                //     "We focus our efforts in the North Sea and more specifically in Norwegian waters. " +
+                //     "With the application of the most energy-efficient process available, CCS is possible at a rate below the cost of the carbon tax in Norway, " +
+                //     "providing an additional financial incentive, besides the created corporate social responsibility value for customers.",
 
         }
         },
