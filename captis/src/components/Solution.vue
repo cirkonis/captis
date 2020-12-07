@@ -1,5 +1,8 @@
 <template>
-    <v-container class="solution-container" col="11">
+    <v-container class="solution-container
+                       px-16
+                       my-10
+                            " col="10">
         <v-card
                 :class="height"
                 elevation="0"
@@ -128,8 +131,8 @@
     }
     .solution-container{
         display: flex;
-        justify-content: space-between;
-        align-content: space-between;
+        /*justify-content: center;*/
+        /*align-content: space-between;*/
         padding-top: 10px;
     }
 

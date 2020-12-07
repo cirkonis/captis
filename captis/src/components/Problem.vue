@@ -1,5 +1,7 @@
 <template>
-    <v-container class="solution-container"  col="11">
+    <v-container class="solution-container
+                 px-16
+                 my-10" col="10">
         <v-card
                 :class="height"
                 elevation="0"
