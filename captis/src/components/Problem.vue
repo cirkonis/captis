@@ -111,7 +111,7 @@
             size: function() {
                 switch (this.$vuetify.breakpoint.name) {
                     case 'xs':
-                        return 150;
+                        return 0;
                     case 'sm':
                         return 150;
                     case 'md':

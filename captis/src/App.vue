@@ -8,8 +8,9 @@
                     >
             <Toolbar/>
         </v-app-bar>
-        <Carbon v-bind:carbonCapture="this.carbonCapture"/>
-
+        <div style="display: flex; flex-direction: row; justify-content: center">
+        <Carbon  v-bind:carbonCapture="this.carbonCapture"/>
+        </div>
       <div id = "main" class="what">   <Main @childToParent="carbonCaptureClicked()"/>    </div>
       <div id = "problem" class="where">  <Problem/>  </div>
       <div id = "solution" class="how">  <Solution/> </div>
@@ -82,26 +83,27 @@ export default {
 
     .what{
         padding-top: 20px;
+        margin-bottom: 10px;
     }
 
     .where{
         padding-top: 20px;
-
+        margin-bottom: 10px;
     }
 
     .how{
         padding-top: 20px;
-
+        margin-bottom: 10px;
     }
 
     .why{
         padding-top: 20px;
-
+        margin-bottom: 10px;
     }
 
     .who{
         padding-top: 20px;
-
+        margin-bottom: 10px;
     }
 
 

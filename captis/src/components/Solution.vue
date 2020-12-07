@@ -14,7 +14,7 @@
                         :size="size"
                         color="transparent"
                 >
-                    <img src="../assets/marketPics/solution.png">
+                    <img src="../assets/marketPics/unit.png">
                 </v-list-item-avatar>
                 <v-list-item-content>
                     <v-list-item-title class="how
@@ -93,15 +93,15 @@
             size: function() {
                 switch (this.$vuetify.breakpoint.name) {
                     case 'xs':
-                        return 150;
+                        return 0;
                     case 'sm':
-                        return 150;
+                        return 200;
                     case 'md':
                         return 400;
                     case 'lg':
                         return 500;
                     case 'xl':
-                        return 600;
+                        return 800;
                     default:
                         return 300;
                 }

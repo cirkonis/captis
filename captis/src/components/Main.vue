@@ -7,7 +7,12 @@
             mb-xl-16
 ">
         <div class="logo">
-            <div v-if="this.buttonExist">
+            <div class="easter-egg
+            mt-xs-7
+            mt-sm-8
+            mt-md-10
+            mt-lg-14
+            mt-xl-16" v-if="this.buttonExist">
             <button class="captis-button" v-on:click="carbonCapture()">
             </button>
             </div>
@@ -23,7 +28,6 @@
             />
         </div>
     <v-container class="main">
-
     <v-col cols="12">
         <v-row>
         <h1 class ="the-header
@@ -71,6 +75,7 @@
                 this.carbonCaptureTrigger = !this.carbonCaptureTrigger;
                 this.buttonExist = false;
                 this.$emit('childToParent', this.carbonCaptureTrigger);
+                console.log('easteregg')
                 return this.carbonCaptureTrigger;
             },
 
@@ -106,10 +111,8 @@
 <style>
     .captis-button{
         position: absolute;
-        top: 2%;
-        right: 46%;
         width: 150px;
-        height: 200px;
+        height: 300px;
         background-color: transparent;
         border-radius: 20%;
         z-index: 3;
@@ -124,6 +127,14 @@
         align-content: center;
         justify-content: center;
     }
+    .easter-egg{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+    }
+
+
     .the-header{
         display: flex;
         justify-content: center;
@@ -146,11 +157,9 @@
     }
 
     .logo{
-        display: flex;
+        display: grid;
         align-content: center;
         justify-content: center;
-        top:5%;
-        left: 35%;
         margin-top: 20px;
     }
 
