@@ -1,5 +1,11 @@
 <template>
-    <div>
+    <div class="
+            mb-xs-4
+            mb-sm-5
+            mb-md-7
+            mb-lg-10
+            mb-xl-16
+">
         <div class="logo">
             <div v-if="this.buttonExist">
             <button class="captis-button" v-on:click="carbonCapture()">
@@ -7,22 +13,35 @@
             </div>
             <v-img
                     alt="Vuetify Logo"
-                    class="shrink mr-2"
+                    class="mt-6"
                     contain
                     src="../../src/assets/captisLogo.svg"
                     transition="scale-transition"
-                    width="350"
-                    height="350"
+                    :width="size"
+                    :height="size"
+
             />
         </div>
     <v-container class="main">
 
     <v-col cols="12">
         <v-row>
-        <h1 class ="the-header">Offshore Carbon Capture</h1>
+        <h1 class ="the-header
+             text-xs-h6
+        text-sm-h5
+        text-md-h4
+        text-lg-h3
+        text-xl-h2
+">Offshore Carbon Capture</h1>
         </v-row>
-        <v-row>
-            <p class="flufferMcflufferton">{{message}}</p>
+        <v-row justify="center">
+            <p class="flufferMcflufferton
+            text-xs-body-1
+        text-sm-body-2
+        text-md-h6
+        text-lg-h5
+        text-xl-h4
+">{{message}}</p>
         </v-row>
         <v-row class="contact-button">
             <v-btn class="white--text"
@@ -63,6 +82,24 @@
                     alert('Could not retrieve email');
                 });
             }
+        },
+        computed: {
+            size: function() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'xs':
+                        return 150;
+                    case 'sm':
+                        return 200;
+                    case 'md':
+                        return 300;
+                    case 'lg':
+                        return 400;
+                    case 'xl':
+                        return 500;
+                    default:
+                        return 300;
+                }
+            },
         },
     }
 </script>
