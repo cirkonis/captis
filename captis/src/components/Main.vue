@@ -8,12 +8,13 @@
 ">
         <div class="logo">
             <div class="easter-egg
+      " v-if="this.buttonExist">
+            <button class="captis-button
             mt-xs-7
             mt-sm-8
             mt-md-10
             mt-lg-14
-            mt-xl-16" v-if="this.buttonExist">
-            <button class="captis-button" v-on:click="carbonCapture()">
+            mt-xl-16" v-on:click="carbonCapture()">
             </button>
             </div>
             <v-img

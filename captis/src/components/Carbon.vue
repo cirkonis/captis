@@ -1,13 +1,10 @@
 <template>
-    <v-container class="svg-container mt-16"  v-bind:style="styleObject">
-        <div v-if="!this.carbonCapture" v-bind:style="styleObject" >
-        <svg class="carbon-svg" >
-        </svg>
+    <v-container class="svg-container mt-16">
+        <div v-if="!this.carbonCapture" class="svg-container" style="opacity: 1">
+        <svg class="carbon-svg"></svg>
         </div>
-
-        <div v-if="this.carbonCapture" v-bind:style="styleObject" >
-        <svg class="carbon-capture-svg" >
-        </svg>
+        <div>
+            <svg class="carbon-neg-svg"></svg>
         </div>
     </v-container>
 </template>
@@ -19,19 +16,16 @@
         props: ['carbonCapture',],
         data: function () {
             return {
-                styleObject: {
-                    width: this.width + "px",
-                    height: this.height + "px",
-                }
             }
         },
         mounted() {
-            this.makeSumCarbon('.carbon-svg', -3);
+            this.makeSumCarbon('.carbon-svg', -40);
         },
         watch: {
             carbonCapture: function (val) {
                 this.carbonCapture = val;
-                this.makeSumCarbon('.carbon-capture-svg', .1);
+                this.makeSumCarbon('.carbon-neg-svg', .4);
+                setTimeout( function () {d3.select('.carbon-neg-svg').remove('*').exit}, 10000)
             },
         },
         methods: {
@@ -39,7 +33,7 @@
                 let svg = d3.select(svgTag);
                 let g = svg.append('g');
                 let radius = 2;
-                let width = 1000;
+                let width = 2000;
                 let height = 500;
                 let bonds = [];
                 let numNodes = Math.pow(3, 6);
@@ -53,20 +47,10 @@
                 }
                 let edges = bonds;
 
-                function box_force() {
-                    for (var i = 0, n = nodes.length; i < n; ++i) {
-                        const curr_node = nodes[i];
-                        curr_node.x = Math.max(radius, Math.min(width - radius, curr_node.x));
-                        curr_node.y = Math.max(radius, Math.min(height - radius, curr_node.y));
-                    }
-                }
-
-
                 let forceSimulation = d3.forceSimulation(nodes)
                     .force('link', d3.forceLink().strength(1.3))
                     .force('charge', d3.forceManyBody().strength(repulsionStrength))
-                    .force('center', d3.forceCenter())
-                    .force('box_force', box_force());
+                    .force('center', d3.forceCenter());
                 forceSimulation.nodes(nodes)
                     .on('tick', ticked);
                 forceSimulation.force('link')
@@ -74,7 +58,7 @@
                     .distance(.5);
                 forceSimulation.force('center')
                     .x(width / 2)
-                    .y(height / 2);
+                    .y(height / 3);
                 let links = g.append('g')
                     .selectAll('line')
                     .data(edges)
@@ -123,7 +107,6 @@
                             return d.target.y
                         });
                 }
-
             }
 
         },
@@ -173,19 +156,20 @@
         top:0;
         opacity: .3;
         z-index: 0;
-        width: 1000px;
+        width: 2000px;
         height: 1000px;
     }
 
-    .carbon-svg{
-        width: 1000px;
-        height: 1000px;
+    .carbon-svg {
+        width: 2000px;
+        height: 100%;
         z-index: -1;
     }
 
-    .carbon-capture-svg{
-        width: 1000px;
-        height: 1000px;
+    .carbon-neg-svg {
+        width: 2000px;
+        height: 100%;
         z-index: -1;
     }
+
 </style>
