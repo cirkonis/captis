@@ -1,28 +1,52 @@
 <template>
-    <div>
+    <div class="
+            mb-xs-4
+            mb-sm-5
+            mb-md-7
+            mb-lg-10
+            mb-xl-16
+">
         <div class="logo">
-            <div v-if="this.buttonExist">
-            <button class="captis-button" v-on:click="carbonCapture()">
+            <div class="easter-egg
+      " v-if="this.buttonExist">
+            <button class="captis-button
+            mt-xs-7
+            mt-sm-8
+            mt-md-10
+            mt-lg-14
+            mt-xl-16" v-on:click="carbonCapture()">
             </button>
             </div>
             <v-img
                     alt="Vuetify Logo"
-                    class="shrink mr-2"
+                    class="mt-6"
                     contain
                     src="../../src/assets/captisLogo.svg"
                     transition="scale-transition"
-                    width="350"
-                    height="350"
+                    :width="size"
+                    :height="size"
+
             />
         </div>
     <v-container class="main">
-
     <v-col cols="12">
         <v-row>
-        <h1 class ="the-header">Offshore Carbon Capture</h1>
+        <h1 class ="the-header
+             text-xs-h6
+        text-sm-h5
+        text-md-h4
+        text-lg-h3
+        text-xl-h2
+">Offshore Carbon Capture</h1>
         </v-row>
-        <v-row>
-            <p class="flufferMcflufferton">{{message}}</p>
+        <v-row justify="center">
+            <p class="flufferMcflufferton
+            text-xs-body-1
+        text-sm-body-2
+        text-md-h6
+        text-lg-h5
+        text-xl-h4
+">{{message}}</p>
         </v-row>
         <v-row class="contact-button">
             <v-btn class="white--text"
@@ -52,6 +76,7 @@
                 this.carbonCaptureTrigger = !this.carbonCaptureTrigger;
                 this.buttonExist = false;
                 this.$emit('childToParent', this.carbonCaptureTrigger);
+                console.log('easteregg')
                 return this.carbonCaptureTrigger;
             },
 
@@ -64,15 +89,31 @@
                 });
             }
         },
+        computed: {
+            size: function() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'xs':
+                        return 150;
+                    case 'sm':
+                        return 200;
+                    case 'md':
+                        return 300;
+                    case 'lg':
+                        return 400;
+                    case 'xl':
+                        return 500;
+                    default:
+                        return 300;
+                }
+            },
+        },
     }
 </script>
 <style>
     .captis-button{
         position: absolute;
-        top: 2%;
-        right: 46%;
         width: 150px;
-        height: 200px;
+        height: 300px;
         background-color: transparent;
         border-radius: 20%;
         z-index: 3;
@@ -87,6 +128,14 @@
         align-content: center;
         justify-content: center;
     }
+    .easter-egg{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+    }
+
+
     .the-header{
         display: flex;
         justify-content: center;
@@ -109,11 +158,9 @@
     }
 
     .logo{
-        display: flex;
+        display: grid;
         align-content: center;
         justify-content: center;
-        top:5%;
-        left: 35%;
         margin-top: 20px;
     }
 

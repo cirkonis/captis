@@ -4,11 +4,10 @@
                     <v-row class="header"><h1>WHO</h1></v-row>
 <!--                    <v-row class="sub-header"><h1>we are</h1></v-row>-->
                 </v-container>
-                <v-col cols="8">
+                <v-col cols="12" xl="10" lg="8" md="6" sm="4" xs="2" >
                     <v-row class="people-row"  >
                      <div
-                             elevation="1"
-                             v-for="person in people"
+                               v-for="person in people"
                               :key="person.id">
                         <img class="people-pics" v-bind:src="require('../assets/newPhotos/' + person.picture)">
 
@@ -22,7 +21,7 @@
                         <v-container class="link-container">
                             <v-icon class = "links" small color="#61BFF0" v-on:click="linkedInClick(person.linkdIn)">mdi-linkedin</v-icon>
                             <v-icon class = "links" small color="#61BFF0" v-on:click="emailClick(person.email, person.name)">mdi-email</v-icon>
-<!--                            <v-icon class = "links" small color="#61BFF0" v-on:click="moreInfoClick()">mdi-information-outline</v-icon>-->
+                            <v-icon class = "links" small color="#61BFF0" v-on:click="moreInfoClick()">mdi-information-outline</v-icon>
                         </v-container>
                         </v-card>
                      </div>
@@ -50,7 +49,7 @@
                     {
                         id: 0,
                         name: "Artur Żebrowski",
-                        description: "Wind Energy",
+                        description: "Head of Marketing",
                         picture: "a.jpg",
                         linkdIn: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fartur-s-zebrowski%2F%3Ffbclid%3DIwAR2tEib6aC67nSBaCnVEH1rnQohN8L86X6Rd-aqyixczkBhTkFBaZK8VZoY&h=AT3o0ZB4CdsxnuOIPwAcITDyek8eoZ-PEeAlUkPe6HNhAgxswpmMkZPG-0t_sO06WR9iy7vxPwan9-HeFts6pureelOIEZCAGlcd_5PPG1avGQoUNPPVGH2nhU3ZTrYbSUYmUcPH",
                         email:"s202371@student.dtu.dk",
@@ -58,7 +57,7 @@
                     {
                         id: 1,
                         name: "Burkay Duymaz",
-                        description: "Product Development",
+                        description: "Head of Modelling",
                         picture: "b.jpg",
                         linkdIn: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fburkay-duymaz-152b26152%2F%3Ffbclid%3DIwAR1n1ArAzq1alCD4kaMsBtwgGpEl9JxSkWNvrrfKtBKoySHpvgKGLfbQcxc&h=AT3o0ZB4CdsxnuOIPwAcITDyek8eoZ-PEeAlUkPe6HNhAgxswpmMkZPG-0t_sO06WR9iy7vxPwan9-HeFts6pureelOIEZCAGlcd_5PPG1avGQoUNPPVGH2nhU3ZTrYbSUYmUcPH",
                         email:"s165036@student.dtu.dk",
@@ -66,7 +65,7 @@
                     {
                         id: 2,
                         name: "Cyril Eštok",
-                        description: "Chemical Engineering",
+                        description: "Head of Technology",
                         picture: "c.jpg",
                         linkdIn: "https://l.facebook.com/l.php?u=http%3A%2F%2Flinkedin.com%2Fin%2Fcyril-estok%3Ffbclid%3DIwAR2rAeu0-CaJclt0S4xYipY6i3hxApkXgS0hIh0D7mNDphNyVqCOBMZ_aE8&h=AT3o0ZB4CdsxnuOIPwAcITDyek8eoZ-PEeAlUkPe6HNhAgxswpmMkZPG-0t_sO06WR9iy7vxPwan9-HeFts6pureelOIEZCAGlcd_5PPG1avGQoUNPPVGH2nhU3ZTrYbSUYmUcPH",
                         email:"s164562@student.dtu.dk",
@@ -74,7 +73,7 @@
                     {
                         id: 3,
                         name: "Michael Marigliano",
-                        description: "Software Engineering",
+                        description: "Head of Software",
                         picture: "m.jpg",
                         linkdIn: "https://www.linkedin.com/in/michael-marigliano-b22a2b1ab/",
                         email:"s202787@student.dtu.dk",
@@ -82,7 +81,7 @@
                     {
                         id: 4,
                         name: "Nathan Moret​",
-                        description: "Physics and Nanotechnology​",
+                        description: "Head of C02 Storage",
                         picture: "n.jpg",
                         linkdIn: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fnathan-moret-456464184%3Ffbclid%3DIwAR3hS95T7didCfOMaiTpZG03-SWcUoLhpjSuxURZrQV2TeAUlitWhHT8hhQ&h=AT3o0ZB4CdsxnuOIPwAcITDyek8eoZ-PEeAlUkPe6HNhAgxswpmMkZPG-0t_sO06WR9iy7vxPwan9-HeFts6pureelOIEZCAGlcd_5PPG1avGQoUNPPVGH2nhU3ZTrYbSUYmUcPH",
                         email:"s202935@student.dtu.dk",
@@ -90,7 +89,7 @@
                     {
                         id: 6,
                         name: "Zainab Hassoun",
-                        description: "Autonomous Systems",
+                        description: "Head of Design",
                         picture: "z.jpg",
                         linkdIn: "http://linkedin.com",
                         email:"s203397@student.dtu.dk",
@@ -98,7 +97,7 @@
                     {
                         id: 5,
                         name: "Ole Kleinschmidt​",
-                        description: "Materials and Manufacturing​",
+                        description: "Head of Operations​",
                         picture: "o.jpg",
                         linkdIn: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Folekleinschmidt%2F%3Ffbclid%3DIwAR2IY3K0yw4tEHa_6V7VvPEvqRjSttI7q0U03rE5wE_ucKuPvL6mrlhh9Hg&h=AT3o0ZB4CdsxnuOIPwAcITDyek8eoZ-PEeAlUkPe6HNhAgxswpmMkZPG-0t_sO06WR9iy7vxPwan9-HeFts6pureelOIEZCAGlcd_5PPG1avGQoUNPPVGH2nhU3ZTrYbSUYmUcPH",
                         email:"s192852@student.dtu.dk",
@@ -157,8 +156,8 @@
     align-content: center;
     justify-items: center;
     /* top | right | bottom | left */
-    margin: 0 10% 10px 10%;
-    width: 200px;
+    margin: 0 50px 10px 50px;
+    width: 180px;
     height: 100px;
     background-color: transparent;
 }
@@ -168,12 +167,10 @@
     margin-right: auto;
     margin-top: 20px;
     object-fit: cover;
-    width: 175px;
-    height: 175px;
+    width: 200px;
+    height: 275px;
     object-fit: cover;
     object-position: 0% 20%;
-    border-radius: 50%;
-    z-index: 1;
 }
  .people-pics:hover{
     cursor: default;
