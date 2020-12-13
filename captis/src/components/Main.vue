@@ -7,8 +7,7 @@
             mb-xl-16
 ">
         <div class="logo">
-            <div class="easter-egg
-      " v-if="this.buttonExist">
+            <div class="easter-egg" v-if="this.buttonExist">
             <button class="captis-button
             mt-xs-7
             mt-sm-8
@@ -22,7 +21,6 @@
                     class="mt-6"
                     contain
                     src="../../src/assets/captisLogo.svg"
-                    transition="scale-transition"
                     :width="size"
                     :height="size"
 
@@ -31,17 +29,11 @@
     <v-container class="main">
     <v-col cols="12">
         <v-row>
-        <h1 class ="the-header
-             text-xs-h6
-        text-sm-h5
-        text-md-h4
-        text-lg-h3
-        text-xl-h2
-">Offshore Carbon Capture</h1>
+        <h1 class ="the-header text-xs-h6 text-sm-h5 text-md-h4 text-lg-h text-xl-h2">Offshore Carbon Capture</h1>
         </v-row>
         <v-row justify="center">
-            <p class="flufferMcflufferton
-            text-xs-body-1
+            <p class="
+        flufferMcflufferton text-xs-body-1
         text-sm-body-2
         text-md-h6
         text-lg-h5
@@ -141,7 +133,7 @@
         justify-content: center;
         align-content: center;
         text-align: center;
-        font-family: "Trebuchet MS";
+        font-family: Roboto!important;
         font-size: 50px;
         font-style: normal;
         color: #61BFF0;
@@ -151,10 +143,7 @@
 
     .flufferMcflufferton{
         text-align: center;
-        font-family: "Trebuchet MS";
-        font-size: 20px;
-        font-style: normal;
-        darkcolor: #2D2B1F;
+        color: #2D2B1F;
     }
 
     .logo{
@@ -171,4 +160,5 @@
         width: 100%;
         height: 50px;
     }
+
 </style>
