@@ -1,10 +1,10 @@
 <template>
-    <v-container class="svg-container mt-16">
+    <v-container class="svg-container mt-16" :width="width">
         <div v-if="!this.carbonCapture" class="svg-container" style="opacity: 1">
-        <svg class="carbon-svg"></svg>
+        <svg class="carbon-svg" :width="width"></svg>
         </div>
         <div>
-            <svg class="carbon-neg-svg"></svg>
+            <svg class="carbon-neg-svg" :width="width"></svg>
         </div>
     </v-container>
 </template>
@@ -33,7 +33,7 @@
                 let svg = d3.select(svgTag);
                 let g = svg.append('g');
                 let radius = 2;
-                let width = 2000;
+                let width = 1500;
                 let height = 500;
                 let bonds = [];
                 let numNodes = Math.pow(3, 6);
@@ -58,7 +58,7 @@
                     .distance(.5);
                 forceSimulation.force('center')
                     .x(width / 2)
-                    .y(height / 3);
+                    .y(height / 3.3);
                 let links = g.append('g')
                     .selectAll('line')
                     .data(edges)
@@ -130,17 +130,17 @@
             width: function () {
                 switch (this.$vuetify.breakpoint.name) {
                     case 'xs':
-                        return 200;
+                        return 300 + "px";
                     case 'sm':
-                        return 200;
+                        return 300 + "px";
                     case 'md':
-                        return 200;
+                        return 500 + "px";
                     case 'lg':
-                        return 200;
+                        return 1500 + "px";
                     case 'xl':
-                        return 200;
+                        return 2000 + "px";
                     default:
-                        return 400;
+                        return 1000 + "px";
                 }
             },
         },
@@ -156,18 +156,18 @@
         top:0;
         opacity: .3;
         z-index: 0;
-        width: 2000px;
+        /*width: 2000px;*/
         height: 1000px;
     }
 
     .carbon-svg {
-        width: 2000px;
+        /*width: 2000px;*/
         height: 100%;
         z-index: -1;
     }
 
     .carbon-neg-svg {
-        width: 2000px;
+        /*width: 2000px;*/
         height: 100%;
         z-index: -1;
     }

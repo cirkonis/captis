@@ -82,8 +82,8 @@ export default {
     }
 
     .what{
-        padding-top: 20px;
-        margin-bottom: 10px;
+        /*padding: 20% 3% 0 3%;*/
+        /*margin: 20% 0 2% 0;*/
     }
 
     .where{

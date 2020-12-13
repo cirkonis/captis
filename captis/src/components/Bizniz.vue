@@ -1,60 +1,29 @@
 <template>
-    <v-container class="solution-container
-                 px-16
-                 my-10" col="10">
-        <v-card
-                :height="height"
-                elevation="0"
-                color="transparent"
-        >
-            <v-list-item>
-                <v-list-item-content>
-                            <v-list-item-title class="how
-        text-xs-h6
-        text-sm-h5
-        text-md-h4
-        text-lg-h3
-        text-xl-h2
-        text-justify ">WHY</v-list-item-title>
-                    <v-list-item-title class="title mb-1 text subtitle
-        text-xs-body-1
-        text-sm-h6
-        text-md-h5
-        text-lg-h4
-        text-xl-h3
-        text-justify">we want to do it</v-list-item-title>
-                    <v-list-item-content class="solution-text
-        text-xs-body-2
-        text-sm-body-1
-        text-md-h6
-        text-lg-h4
-        text-xl-h3
-        text-justify">
-                            <p class="solution-text">{{messagePart1}}</p>
-                    </v-list-item-content>
-                    <v-list-item-content class="solution-text
-        text-xs-body-2
-        text-sm-body-1
-        text-md-h5
-        text-lg-h4
-        text-xl-h3
-        text-justify">
-                        <p class="solution-text">{{messagePart2}}</p>
-                    </v-list-item-content>
-<!--                    <v-list-item-content class="solution-text text">-->
-<!--                        <p class="solution-text">{{messagePart3}}</p>-->
-<!--                    </v-list-item-content>-->
-                </v-list-item-content>
-                <v-list-item-avatar
-                        tile
-                        :size="size"
-                        color="transparent"
-                >
-                    <img src="../assets/marketPics/unSustain.png">
-                </v-list-item-avatar>
-            </v-list-item>
-        </v-card>
-    </v-container>
+    <div class="container">
+        <div class="row header">
+            <p>Why</p>
+        </div>
+        <div class="row sub-header">
+            <p>we do it</p>
+        </div>
+        <div class="row first col-12">
+            <div class="column message col-6">
+                <p>{{messagePart1}}</p>
+            </div>
+            <div class="column image col-4">
+            </div>
+        </div>
+        <div class="row second">
+            <div class="column">
+                <p>{{messagePart2}}</p>
+            </div>
+        </div>
+        <div class="row third">
+            <div class="column">
+                <p>{{messagePart3}}</p>
+            </div>
+        </div>
+        </div>
 </template>
 
 <script>
@@ -67,80 +36,69 @@
                 messagePart3: "The Paris Climate Agreement states that the goal of median warming of 2°C maximum is only achievable with the use of CCS. It is because of this importance that broad use of this technology in all industrial sectors worldwide is necessary."
             }
         },
-        computed: {
-            height: function() {
-                switch (this.$vuetify.breakpoint.name) {
-                    case 'xs':
-                        return 1000;
-                    case 'sm':
-                        return 700;
-                    case 'md':
-                        return 600;
-                    case 'lg':
-                        return 900;
-                    case 'xl':
-                        return 1000;
-                    default:
-                        return 900;
-                }
-            },
-
-            size: function() {
-                switch (this.$vuetify.breakpoint.name) {
-                    case 'xs':
-                        return 0;
-                    case 'sm':
-                        return 150;
-                    case 'md':
-                        return 400;
-                    case 'lg':
-                        return 500;
-                    case 'xl':
-                        return 600;
-                    default:
-                        return 300;
-                }
-            },
-        },
     }
 </script>
 
 <style scoped>
-    .how{
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        font-family: "Trebuchet MS";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
+    .container {
+        padding: 5% 0 0 0;
+    }
+
+    .header {
+        font-family: titillium;
+        font-size: 4vw;
+        height: 4vw;
         color: #27214C;
+        padding: 0 0 0 2%;
+        margin: 0 0 1% 0;
+        text-transform: uppercase;
     }
-    .subtitle{
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        font-family: "Trebuchet MS";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
+
+    .sub-header {
+        font-family: titillium;
+        font-size: 3vw;
+        hieght: 3vw;
         color: #61BFF0;
+        margin: 0 2% 0 2%;
+        padding: 0 2% 0 2%;
+        text-transform: capitalize;
     }
-    .solution-container{
+
+    .row {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: space-between;
-        padding-top: 10px;
+        padding: 0 3% 0 5%;
     }
-    .solution-text{
-        display: inline;
-        text-align: left;
-        font-family: "Trebuchet MS", serif;
-        /*font-size: 20px;*/
+
+    .column {
+        display: flex;
+        font-family: titillium;
         color: #2D2B1F;
-        background-color: white;
-        line-height: 1.2;
+        font-size: 2.1vw;
+        padding: 0 5% 0 5%;
+        margin: 0 0 0 0;
+    }
+
+    .first .message {
+        flex: 50%;
+    }
+
+    .first .image {
+        flex: 50%;
+        background-image: url(../assets/marketPics/unSustain.png);
+        background-size: contain;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .second .column {
+        flex: 100%;
+    }
+
+    .third .column {
+        flex: 100%;
     }
 </style>
