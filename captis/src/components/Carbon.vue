@@ -33,7 +33,7 @@
                 let svg = d3.select(svgTag);
                 let g = svg.append('g');
                 let radius = 2;
-                let width = 2000;
+                let width = 1500;
                 let height = 500;
                 let bonds = [];
                 let numNodes = Math.pow(3, 6);
@@ -58,7 +58,7 @@
                     .distance(.5);
                 forceSimulation.force('center')
                     .x(width / 2)
-                    .y(height / 3);
+                    .y(height / 3.3);
                 let links = g.append('g')
                     .selectAll('line')
                     .data(edges)
@@ -132,13 +132,13 @@
                     case 'xs':
                         return 300 + "px";
                     case 'sm':
-                        return 500 + "px";
+                        return 300 + "px";
                     case 'md':
-                        return 1000 + "px";
+                        return 500 + "px";
                     case 'lg':
-                        return 1800 + "px";
+                        return 1500 + "px";
                     case 'xl':
-                        return 200 + "px";
+                        return 2000 + "px";
                     default:
                         return 1000 + "px";
                 }
