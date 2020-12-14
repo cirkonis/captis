@@ -72,7 +72,7 @@
         font-family: titillium;
         font-size: 3vw;
         hieght: 3vw;
-        color: #61BFF0;
+        color: #0074b3;
         margin: 0 6% 0 2%;
         padding: 0 4% 0 2%;
         text-transform: capitalize;

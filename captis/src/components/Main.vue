@@ -12,11 +12,11 @@
                     Contact us to find out more or read on below to learn how it is we do what we do.</p>
                 </div>
                 <v-btn class="white--text"
-                       color="#61BFF0"
+                       color="#0074b3"
                        elevation="2"
                        large
                        rounded
-                       style="font-family: titillium"
+                       style="font-family: titillium; font-weight: bold"
                        v-on:click="getContact()">Say Hello</v-btn>
             </div>
         </div>
@@ -76,7 +76,7 @@
     .message-header{
         font-family: titillium;
         font-size: 4vw;
-        color: #61BFF0;
+        color: #0074b3;
         height: 4vw;
         padding: 0 0 0 0;
         margin: 0 0 2% 0;
@@ -87,6 +87,11 @@
         font-size: 2vw;
         color: #2D2B1F;
         text-align: center;
+    }
+
+    .white--text{
+        position: relative;
+       left: 2%;
     }
 </style>
 

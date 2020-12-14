@@ -11,6 +11,7 @@
                 <p>{{messagePart1}}</p>
             </div>
             <div class="column image col-4">
+                <img class="the-image" src="../assets/marketPics/hiTechUnit.png" alt="Captis Tech">
             </div>
         </div>
         <div class="row second">
@@ -65,7 +66,7 @@
         font-family: titillium;
         font-size: 3vw;
         hieght: 3vw;
-        color: #61BFF0;
+        color: #0074b3;
         margin: 0 2% 0 2%;
         padding: 0 2% 0 2%;
         text-transform: capitalize;
@@ -91,8 +92,8 @@
 
     .first .image {
         flex: 50%;
-        background-image: url(../assets/marketPics/captisTech.jpg);
-        background-size: contain;
+        position: relative;
+        right: 5%;
     }
 
     .row::after {
@@ -108,4 +109,9 @@
     .third .column {
         flex: 100%;
     }
+    .the-image{
+        height: auto;
+        width: 50vw
+    }
+
 </style>
