@@ -86,7 +86,7 @@
     .row {
         display: flex;
         justify-content: space-between;
-        padding: 0 2% 0 2%;
+        padding: 0 3% 0 3%;
     }
 
     .column {

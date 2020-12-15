@@ -74,7 +74,7 @@
 
     .row {
         display: flex;
-        padding: 0 3% 0 5%;
+        padding: 0 3% 0 3%;
     }
 
     .column {
@@ -113,5 +113,4 @@
         height: auto;
         width: 50vw
     }
-
 </style>

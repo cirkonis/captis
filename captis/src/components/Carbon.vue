@@ -1,11 +1,6 @@
 <template>
-    <v-container class="svg-container mt-16" :width="width">
-        <div v-if="!this.carbonCapture" class="svg-container" style="opacity: 1">
-        <svg class="carbon-svg" :width="width"></svg>
-        </div>
-        <div>
-            <svg class="carbon-neg-svg" :width="width"></svg>
-        </div>
+    <v-container class="svg-container mt-8" width="100vw">
+        <svg class="carbon-svg" width="100vw"></svg>
     </v-container>
 </template>
 
@@ -13,28 +8,20 @@
     import * as d3 from "d3";
     export default {
         name: "Carbon",
-        props: ['carbonCapture',],
         data: function () {
             return {
             }
         },
         mounted() {
-            this.makeSumCarbon('.carbon-svg', -40);
-        },
-        watch: {
-            carbonCapture: function (val) {
-                this.carbonCapture = val;
-                this.makeSumCarbon('.carbon-neg-svg', .4);
-                setTimeout( function () {d3.select('.carbon-neg-svg').remove('*').exit}, 10000)
-            },
+            this.makeSumCarbon('.carbon-svg', -10, 3000);
         },
         methods: {
-            makeSumCarbon(svgTag, repulsionStrength) {
+            makeSumCarbon(svgTag, repulsionStrength, timeOut) {
                 let svg = d3.select(svgTag);
                 let g = svg.append('g');
                 let radius = 2;
-                let width = 1500;
-                let height = 500;
+                let width = innerWidth - 100;
+                let height = 200;
                 let bonds = [];
                 let numNodes = Math.pow(3, 6);
                 let nodes = [];
@@ -55,10 +42,10 @@
                     .on('tick', ticked);
                 forceSimulation.force('link')
                     .links(edges)
-                    .distance(.5);
+                    .distance(.2);
                 forceSimulation.force('center')
                     .x(width / 2)
-                    .y(height / 3.3);
+                    .y(height);
                 let links = g.append('g')
                     .selectAll('line')
                     .data(edges)
@@ -107,6 +94,23 @@
                             return d.target.y
                         });
                 }
+                setTimeout( function () {
+                    forceSimulation.stop();
+                    forceSimulation.force('charge').strength(55);
+                    forceSimulation.force('link')
+                        .links(edges)
+                        .distance(.1);
+                    forceSimulation.restart();
+                    setTimeout(function() {
+                        forceSimulation.stop();
+                        forceSimulation.force('charge').strength(.6);
+                        forceSimulation.force('link')
+                            .links(edges)
+                            .distance(.1);
+                        forceSimulation.restart();
+                    }, 2200);
+                    setTimeout(function() {d3.select(svgTag).transition().style('opacity', 0);}, 8000);
+                }, timeOut);
             }
 
         },
@@ -132,9 +136,9 @@
                     case 'xs':
                         return 300 + "px";
                     case 'sm':
-                        return 300 + "px";
-                    case 'md':
                         return 500 + "px";
+                    case 'md':
+                        return 1000 + "px";
                     case 'lg':
                         return 1500 + "px";
                     case 'xl':
@@ -156,18 +160,10 @@
         top:0;
         opacity: .3;
         z-index: 0;
-        /*width: 2000px;*/
-        height: 1000px;
+        height: 100vh;
     }
 
     .carbon-svg {
-        /*width: 2000px;*/
-        height: 100%;
-        z-index: -1;
-    }
-
-    .carbon-neg-svg {
-        /*width: 2000px;*/
         height: 100%;
         z-index: -1;
     }
