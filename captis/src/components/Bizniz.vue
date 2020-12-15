@@ -11,6 +11,7 @@
                 <p>{{messagePart1}}</p>
             </div>
             <div class="column image col-4">
+                <img class="un-sustain" src="../assets/marketPics/unSustain.png" alt="Sustainability Goals">
             </div>
         </div>
         <div class="row second">
@@ -58,7 +59,7 @@
         font-family: titillium;
         font-size: 3vw;
         hieght: 3vw;
-        color: #61BFF0;
+        color: #0074b3;
         margin: 0 2% 0 2%;
         padding: 0 2% 0 2%;
         text-transform: capitalize;
@@ -66,7 +67,7 @@
 
     .row {
         display: flex;
-        padding: 0 3% 0 5%;
+        padding: 0 3% 0 3%;
     }
 
     .column {
@@ -84,10 +85,15 @@
 
     .first .image {
         flex: 50%;
-        background-image: url(../assets/marketPics/unSustain.png);
-        background-size: contain;
+        margin: 0 0 1% 0;
     }
-
+    .un-sustain{
+        width: 50vw;
+        /*height: auto;*/
+        position: relative;
+        bottom: 6%;
+        right: 20%;
+    }
     .row::after {
         content: "";
         clear: both;
