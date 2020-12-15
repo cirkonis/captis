@@ -35,7 +35,7 @@
             getContact() {
                 console.log('buttonworks');
                 this.$copyText('hello@captis.dk').then(function () {
-                    alert('hello@captis.dk copied to your clipboard!');
+                    alert('hello@captis.dk copied to your clipboard. Looking forward to hearing form you!');
                 }, function () {
                     alert('Could not retrieve email');
                 });
@@ -87,11 +87,6 @@
         font-size: 2vw;
         color: #2D2B1F;
         text-align: center;
-    }
-
-    .white--text{
-        position: relative;
-       left: 2%;
     }
 </style>
 

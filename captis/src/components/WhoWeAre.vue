@@ -43,7 +43,7 @@
                        large
                        rounded
                        style="font-family: titillium; font-weight: bold"
-                       v-on:click="emailClick('hello@captis.dk', 'hello@captis.dk')">Say Hello
+                       v-on:click="contactClick('hello@captis.dk')">Say Hello
                 </v-btn>
             </v-row>
         </v-col>
@@ -124,6 +124,13 @@
             emailClick(email, name) {
                 this.$copyText(email).then(function () {
                     alert('Email for ' + name + ' copied to your clipboard!');
+                }, function () {
+                    alert('Could not retrieve email');
+                });
+            },
+            contactClick(email) {
+                this.$copyText(email).then(function () {
+                    alert('hello@captis.dk copied to your clipboard. Looking forward to hearing from you!');
                 }, function () {
                     alert('Could not retrieve email');
                 });

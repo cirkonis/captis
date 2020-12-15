@@ -8,6 +8,10 @@
         </div>
         <div class="row first col-12">
             <div class="column image col-6">
+                <video class="video" controls>
+                    <source src="../assets/process.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <div class="column message col-4">
                 <p>{{messagePart1}}</p>
@@ -81,6 +85,7 @@
 
     .row {
         display: flex;
+        justify-content: space-between;
         padding: 0 2% 0 2%;
     }
 
@@ -96,15 +101,15 @@
     }
 
     .first .message {
-        padding: 0 0 0 3%;
+        padding: 0 0 0 0;
     }
 
     .first .image {
         flex: 50%;
-        background-image: url(../assets/marketPics/unit.png);
-        background-size: contain;
-        padding: 0 0 0 15%;
-        margin: 0 0 0 15%;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        position: relative;
+        bottom: 2vw;
     }
 
     .row::after {
@@ -119,5 +124,10 @@
 
     .third .column {
         flex: 100%;
+    }
+    .video{
+        /*width: 500px;*/
+        width: 35vw;
+        height: auto;
     }
 </style>

@@ -11,6 +11,7 @@
                 <p>{{messagePart1}}</p>
             </div>
             <div class="column image col-4">
+                <img class="un-sustain" src="../assets/marketPics/unSustain.png" alt="Sustainability Goals">
             </div>
         </div>
         <div class="row second">
@@ -84,10 +85,15 @@
 
     .first .image {
         flex: 50%;
-        background-image: url(../assets/marketPics/unSustain.png);
-        background-size: contain;
+        margin: 0 0 1% 0;
     }
-
+    .un-sustain{
+        width: 50vw;
+        /*height: auto;*/
+        position: relative;
+        bottom: 6%;
+        right: 20%;
+    }
     .row::after {
         content: "";
         clear: both;
